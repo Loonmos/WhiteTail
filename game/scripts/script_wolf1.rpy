@@ -24,11 +24,11 @@ label wolf1:
 
     "A figure steps out of the undergrowth. She looks like a regular wolf, but those eyes... There is only one wolf with blue eyes around here."
 
-    "You recognize her. Many from your burrow have gotten injured or died by her paw."
+    "You heard many tales about this one. Many from your burrow have gotten injured or died by her paw."
 
     wt "{i}Oh no.{/i}"
 
-    "Your heart pounds in your chest. Your legs lock up and you can't do anything but gape up at her."
+    "Your heart pounds in your chest. Your legs lock up and you can't do anything but look up at her."
 
     "She moves forward, paws barely making a sound against the snow."
 
@@ -45,25 +45,28 @@ label wolf1:
     fe "No scars, little food and an all consuming fear."
 
     menu:
-        "How should I say?"
+        "What should I do?"
 
-        "Who are you?":
+        "Stall for more time":
+            wt "Who are you?"
             fe "I think you know that very well. It hasn't been that long since I took a bite out of one of your elders..."
 
-        "Please don't hurt me.":
+        "Beg for your life":
+            wt "Please don't hurt me."
             fe "Don't worry little rabbit, it won't hurt for long..."
 
-        "Come any closer and I'll scream for the others.":
+        "Scare her away":
+            wt "Come any closer and I'll scream for the others."
             "The wolf snorts and stalks closer."
 
-    "You see her muscles shift."
+    "{color=#9c3730}You see her muscles shift.{/color}"
 
     jump wolf1_choice1
 
 label wolf1_choice1:
 
     menu(time=2, timeout="freeze"):
-        "RUN!!!"
+        "{color=#9c3730}RUN!!!{/color}"
 
         "Run Away":
              jump run_away
@@ -77,20 +80,19 @@ label run_away:
 
     "The sound of heavy paws thudding behind you sends terror through your limbs."
 
-    "Then... your bundle of food gets caught behind some branches."
+    "{color=#9c3730}Then... your bundle of food gets caught behind some branches.{/color}"
 
     jump wolf1_choice2
 
 label wolf1_choice2:
     
-    menu(time=2, timeout="pry"):
-        "WHAT DO I DO?"
+    menu(time=2, timeout="no_choice"):
+        "{color=#9c3730}WHAT DO I DO?{/color}"
 
         "Free yourself":
              jump free
 
         "Pry the bundle loose":
-            "You try to pry it loose from the branch but..."
             jump pry
 
 label free:
@@ -122,13 +124,28 @@ label free:
     jump burrow1
 
 label pry:
+    "You try to pry it loose from the branch but..."    
+
     fe "Got you."
 
     "Your neck lights up in pain."
 
     "Your body gets thrown into the snow and you try to scream... But all that comes out are some gurgles."
 
-    "Your vision blurs. The last thing you see are her pale eyes, glowing in the cold."
+    "Your vision blurs. The last thing you see are her pale eyes, glowing in the growing darkness."
+
+    jump death_wolf2
+
+label no_choice:
+    "You weren't able to make a decision in time..."    
+
+    fe "Got you."
+
+    "Your neck lights up in pain."
+
+    "Your body gets thrown into the snow and you try to scream... But all that comes out are some gurgles."
+
+    "Your vision blurs. The last thing you see are her pale eyes, glowing in the growing darkness."
 
     jump death_wolf2
 
@@ -139,7 +156,7 @@ label freeze:
 
     "The world spins as you're thrown into the snow. Sharp claws press deep into your chest, creating a growing pool of blood beneath you."
 
-    "Your vision blurs. The last thing you see are her pale eyes, glowing in the cold."
+    "Your vision blurs. The last thing you see are her pale eyes, glowing in the growing darkness."
 
     jump death_wolf1
 
@@ -147,8 +164,6 @@ label death_wolf1:
     hide rabbit
     hide wolf
     scene heaven
-
-    de "You died..."
 
     menu:
         de "You died..."
@@ -169,8 +184,6 @@ label death_wolf2:
     hide rabbit
     hide wolf
     scene heaven
-
-    de "You died..."
 
     menu:
         de "You died..."
