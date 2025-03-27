@@ -11,11 +11,11 @@ label start: # the game starts here
 
     scene burrow
 
-    "The sun hangs low in the sky, spilling long shadows across the snowy  forest floor. The air is crisp, cool—the kind that clings to fur and whispers of the coming night."
+    "The sun hangs low in the sky, spilling long shadows across the snowy  forest floor. The air is crisp, cool. The kind that clings to fur and whispers of the coming night."
     "You move carefully beneath the tangle of branches, your ears twitching with every rustle, every distant birdcall."
     "Your paws ache, and your belly gnaws with hunger, but still, you press on."
     
-    wt "{i}Not yet… I can’t go back yet.{/i}"
+    wt "{i} Not yet... I can’t go back yet.{/i}"
     
     "You pause at the base of a leaning tree, nose twitching as you scan the ground for anything edible, roots, seeds, even the brittle ends of last season’s leaves. "
 
