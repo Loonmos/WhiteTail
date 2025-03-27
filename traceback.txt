@@ -1,7 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While parsing C:\Users\demim\OneDrive\Bureaublad\Renpy\White Tail\game/scripts/script_burrow1.rpy.
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0x97 in position 2302: invalid start byte
+While parsing C:\Users\demim\OneDrive\Bureaublad\Renpy\White Tail\game/scripts/script_burrow3.rpy.
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 1464: invalid start byte
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -20,9 +20,9 @@ Full traceback:
     lines = list_logical_lines(fn, filedata, linenumber)
   File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\lexer.py", line 302, in list_logical_lines
     data = f.read().decode("utf-8", "python_strict")
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0x97 in position 2302: invalid start byte
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 1464: invalid start byte
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.6.25022803
 White Tail 1.0
-Thu Mar 27 12:08:43 2025
+Thu Mar 27 13:06:05 2025

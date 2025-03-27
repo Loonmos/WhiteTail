@@ -17,7 +17,9 @@ label wolf2:
 
     "As she continues to struggle, you notice something else. Surrounding the Wolf is a small patch of edible plants. You could really use that right now."
 
-    "The wind picks up, causing the Wolf to pause and sniff the air. She turns her head towards you and her demeanor quickly changes. She lifts herself up again, chin high and ears pricked forward. But her eyes, wide and filled with pain, betray her."
+    "The wind picks up, causing the Wolf to pause and sniff the air. She turns her head towards you and her demeanor quickly changes."
+
+    "She lifts herself up again, chin high and ears pricked forward. But her eyes, wide and filled with pain, betray her."
 
     show wolf at right
     show rabbit at left
@@ -26,7 +28,7 @@ label wolf2:
 
     "The sound of her voice urges you to run, but you don't. Not yet..."
 
-    wt "That we do, wolf. Luckily it's not me who is the prey this time."
+    wt "That we do, wolf. Luckily it's not me who is prey this time."
 
     "The Wolf looks pained and she sighs."
 

@@ -2,7 +2,9 @@
 label wolf1:
     scene snowy forest
 
-    show rabbit at left
+    show rabbit:
+        yalign 0.4
+        xalign 0.2
 
     "The cold bites at your nose as you sniff the air. It's quiet. Too quiet..."
 
