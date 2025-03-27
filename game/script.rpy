@@ -1,6 +1,7 @@
 ﻿# define all game characters here
 define r = Character("White Tail", color="#e3fffe")
 define wt = Character("White Tail", color="#cfcfcf")
+define op = Character("OnePaw"), color="#cfcfcf"
 define fe = Character("Frost Eyes", color="#e0fffe")
 define un = Character("???", color="#ffffff")
 
