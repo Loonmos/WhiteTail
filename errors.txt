@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script_wolf1.rpy", line 64: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Come any closer and I'll scream for the others."
-                                                     ^
-
-File "game/scripts/script_wolf1.rpy", line 76: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "RUN"
-         ^
-
-File "game/scripts/script_wolf1.rpy", line 97: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Free yourself"
-                   ^
-
-File "game/scripts/script_wolf1.rpy", line 167: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Go back to the last choice"
-                                ^
+File "game/script.rpy", line 3: invalid syntax
+    Character("OnePaw"), color="#cfcfcf"
+                               ^
 
 Ren'Py Version: Ren'Py 8.3.6.25022803
-Mon Mar 17 18:03:56 2025
+Thu Mar 27 12:33:12 2025
