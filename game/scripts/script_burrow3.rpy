@@ -2,7 +2,12 @@
 
 label burrow3:
 
-label burrwo3_help
+     if help_wolf:
+         jump burrow3_help
+     else:
+         jump burrow3_leave
+
+label burrow3_help:
     scene burrow
 
     show rabbit at left
@@ -34,7 +39,7 @@ label burrwo3_help
 
     "(Your ears twitch, but you stand firm.)"
 
-    wt "She was trapped. Helpless. I couldn’t just..."
+    wt "She was trapped. Helpless. I couldn't just..."
 
     op "(Interupting) Oh, you could have! You should have! You think she would've spared you, given the chance? No. That beast would've swallowed you whole and left your bones to the crows."
 
@@ -66,7 +71,7 @@ label burrwo3_help
 
     jump fox
 
-label burrow3_leave
+label burrow3_leave:
    scene burrow
 
    show rabbit at left
@@ -82,7 +87,7 @@ label burrow3_leave
 
    op "(examining you closely) Oh? And what, exactly, took your time?"
    
-   "You hesitate, then straighten your posture.
+   "You hesitate, then straighten your posture."
    
    wt "I found her. The wolf. She was caught in a poachers trap"
 
@@ -117,8 +122,8 @@ label burrow3_leave
 
    wt "No... Just tired"
 
-   "Onepaw doesn’t question it. He gives another small nod and turns away, satisfied."
-   "But as you move deeper into the burrow, you can’t shake the weight in you chest. The wolf’s voice lingers in your mind, and for the first time, you aren't sure if you made the right choice."
+   "Onepaw doesn't question it. He gives another small nod and turns away, satisfied."
+   "But as you move deeper into the burrow, you can't shake the weight in you chest. The wolf's voice lingers in your mind, and for the first time, you aren't sure if you made the right choice."
 
 
    hide rabbit
