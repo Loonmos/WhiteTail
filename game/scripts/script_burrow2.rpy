@@ -1,7 +1,7 @@
 
 
 label burrow2:
-    scene burrow
+    scene burrowinside
 
     show rabbit at left
     show rabbit2 at right

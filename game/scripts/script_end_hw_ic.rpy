@@ -1,7 +1,7 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_hw_ic:
-
+    scene forestlight
     "The burrow is quiet. The usual rustling of leaves and distant chirping of birds fill the air. Whitetail is among her fellow rabbits, settling into the rhythm of daily life."
     show rabbit at left
     "A sharp cry splits the air. You run outside and see the fox. The scent of blood follows."

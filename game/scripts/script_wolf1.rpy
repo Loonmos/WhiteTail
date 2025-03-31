@@ -1,6 +1,6 @@
 
 label wolf1:
-    scene snowy forest
+    scene forestdark
 
     show rabbit:
         yalign 0.4

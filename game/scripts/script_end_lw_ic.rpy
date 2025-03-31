@@ -1,7 +1,7 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_lw_ic:
-
+ scene burrowoutside
  "The morning is quiet, the air thick with the scent of damp earth and wildflowers."
  "You stretch, feeling the warmth of the sun on your fur."
  "Another day in the warren. Another day of..."

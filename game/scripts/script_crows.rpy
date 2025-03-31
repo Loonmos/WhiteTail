@@ -6,7 +6,7 @@ define c4 = Character("Crow 4", color="#616161")
 define pay_crows = False
 
 label crows:
-    scene burrow
+    scene burrowoutside
 
     show rabbit at left
     
@@ -16,7 +16,7 @@ label crows:
     wt "I can't dissapoint him, no, the whole burrow again..."
     "You head out into the misty forest while the rest have not awoken yet. But still, you must push on."
     
-    scene snowy forest
+    scene forestlight
 
     show rabbit at left
 

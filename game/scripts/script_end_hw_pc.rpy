@@ -1,6 +1,7 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_hw_pc:
+    scene forestlight
     "The sun is starting to set, casting its long shadows across the forest floor."
 
     "You've been out here for a while now and your bundle is filled with food."

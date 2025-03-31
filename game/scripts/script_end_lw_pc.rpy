@@ -1,7 +1,7 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_lw_pc:
-
+    scene forestlight
     "The sun is starting to set, casting its long shadows across the forest floor."
 
     "You've been out here for a while now and your bundle is filled with food."
@@ -35,7 +35,7 @@ label end_lw_pc:
             wt "{i}No I cannot slow down.{/i}"
 
             wt "{i}I need to be there as fast as possible.{/i}"
-
+            scene burrowoutside
             "You arrive at the burrow, completely out of breath. The other rabbits look at you in alarm."
 
             jump arrive_at_burrow2
@@ -44,12 +44,13 @@ label end_lw_pc:
             wt "{i}I won't have any use if I collapse before I even get back.{/i}"
 
             wt "{i}Let's keep up a light jog.{/i}"
-
+            scene burrowoutside
             "You arrive at the burrow. The other rabbits look happy when they see your filled bundle."
 
             jump arrive_at_burrow2
 
 label arrive_at_burrow2:
+    scene burrowinside
     wt "The fox and the wolf! They're coming!"
 
     "Panic quickly spreads through the burrow. Some rabbits look ready to flee, some run to the entrance to look outside, others run towards the children."
@@ -59,6 +60,7 @@ label arrive_at_burrow2:
     jump other_burrow2
 
 label other_burrow2:
+    scene burrowinside
     wt "Everyone listen to me!"
 
     "The rabbits stop what they're doing and turn their heads towards you."    
@@ -78,6 +80,7 @@ label other_burrow2:
     jump fortify2
 
 label fortify2:
+    scene burrowinside
     "After a while, you have no more resources to build with and the barricade is finished."
 
     "Everyone goes inside and huddles together. The air is tense, the barricade is pretty sturdy but can it withstand the force of two predators?"
@@ -95,6 +98,7 @@ label fortify2:
     jump fox_wolf
 
 label fox_wolf:
+    scene forestlight
     "A couple hours ago..."
 
     "The snow falls in gentle flakes, covering the burrow's entrance in a fresh white layer."

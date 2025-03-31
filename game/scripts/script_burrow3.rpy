@@ -8,7 +8,7 @@ label burrow3:
          jump burrow3_leave
 
 label burrow3_help:
-    scene burrow
+    scene burrowinside
 
     show rabbit at left
     show rabbit2 at right

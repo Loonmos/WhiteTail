@@ -2,10 +2,10 @@ define vp = Character("Vulpes Fox", color="#616161")
 define wt = Character("White Tail", color="#A0A0A0")
 
 label fox:
-    scene snowy_forest with fade
+    scene burrowoutside with fade
     
     show rabbit at left
-    show fox at right
+    
 
     "Surrounded by dying leaves, their colors mirroring the late fall sunset, you stumble upon a hole in the cold soil."
     "A faintly familiar scent lingers in the air-something you can't quite place."
@@ -27,7 +27,7 @@ label fox:
     "As you wander in, the smell of cold, overturned soil feels strange. A burrow should be warm, lived in... this one is wrong."
     "The scent of your kind is here, but so is something else. Something weightier. A muskier scent laced with the sharp tang of flesh."
     "Before you can think another thought-a warm, smooth exhale rolls from the darkness behind you."
-
+    show fox at right
     vp "(Sly and smoothly) You seem far away from your own neighborhood, little one."
 
     "White Tail jerks, frozen. A shape stirs in the shadows-deep, golden eyes watching."

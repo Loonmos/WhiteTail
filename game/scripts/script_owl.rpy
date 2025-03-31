@@ -1,7 +1,7 @@
 define o = Character("Owl", color="#616161")
 
 label owl:
-    scene snowy forest
+    scene forestlight
 
     show rabbit at left
     show owl at right

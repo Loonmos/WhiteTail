@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 18: expected statement.
-    wt
-      ^
+File "game/scripts/script_end_lw_pc.rpy", line 39: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "You arrive at the burrow, completely out of breath. The other rabbits look at you in alarm."
+    ^
+
+File "game/scripts/script_end_lw_pc.rpy", line 48: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "You arrive at the burrow. The other rabbits look happy when they see your filled bundle."
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 31 10:57:44 2025
+Mon Mar 31 16:27:08 2025

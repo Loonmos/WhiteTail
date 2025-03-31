@@ -1,7 +1,7 @@
 define help_wolf = False
 
 label wolf2:
-    scene snowy forest
+    scene forestlight
 
     "You see a Wolf, their leg caught in a beartrap. They appear to be struggling against it, but all it's doing is making the gashes in their leg deeper."
 
