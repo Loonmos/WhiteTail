@@ -19,15 +19,33 @@ label burrow3_help:
 
     op "Hmph. You did bring something back, at least. Perhaps I underestimated you."
 
+    menu:
+     "Tell Onepaw about helping the wolf."
+        jump Behonest1
+     "Try to lie about it."
+        jump Trylie1
+
+   label Behonest1:
     wt "(Quietly) I didn't get it on my own"
 
     op "(Ears flicking) Oh? And what exactly, does that mean?"
 
-    wt "(Takes a breath) I helped her. The wolf. She was trapped, and she aallowed me to gather some food in that area."
+    wt "(Takes a breath) I helped her. The wolf. She was trapped, and she allowed me to gather some food in that area."
 
     "Silence. Onepaw stares at her, unblinking, before his good paw clenches slightly "
+    jump continueburrow3
 
-    op "Tell me it isn't true"
+   label Trylie1:
+    wt "Yes... I... I met the wolf again... but she was trapped and... "
+    " And I left her there and she got what she deserved!"
+
+    wt "{i}What am I thinking, that didn't sound convincing at all, He'll see right through me..."
+
+    "A tense moment of silence"
+    jump continueburrow3
+
+label continueburrow3:    
+ op "Tell me it isn't true"
 
     wt "(Steady but wary) I did what I thought was right"
 
@@ -83,9 +101,12 @@ label burrow3_leave:
 
    op "Not much..."
 
-   wt " No, I lost time."
+   wt "No, I lost time."
 
    op "(examining you closely) Oh? And what, exactly, took your time?"
+
+   menu:
+    "Tell Onepaw about leaving the wolf in the trap"
    
    "You hesitate, then straighten your posture."
    
