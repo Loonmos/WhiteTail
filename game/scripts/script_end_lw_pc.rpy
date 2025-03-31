@@ -59,24 +59,28 @@ label arrive_at_burrow2:
     jump other_burrow2
 
 label other_burrow2:
+    wt "Everyone listen to me!"
+
+    "The rabbits stop what they're doing and turn their heads towards you."    
+
     wt "We have to go now! I found an abandoned burrow yesterday where we can hole up."
 
     "The rest of the burrow looks at you with newfound hope and elder Onepaw looks at you proudly."
 
     wt "Gather what you can and follow me."
 
-    "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow and the fox might find you."
+    "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow means the predators finding you."
 
-    "As you travel, you instruct the others to gather sticks and stones. Just in case the fox manages to track you down."
+    "As you travel, you instruct the others to gather sticks and stones. Just in case they manage to track you down."
 
     "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
     jump fortify2
 
 label fortify2:
-    "After a while, one of the other rabbits shouts in alarm: The fox has been spotted..."
+    "After a while, you have no more resources to build with and the barricade is finished."
 
-    "Everyone runs inside and groups together. The air is tense, the barricade isn't perfect and everyone hopes it will hold up."
+    "Everyone goes inside and huddles together. The air is tense, the barricade is pretty sturdy but can it withstand the force of two predators?"
 
     "The children hide behind their parents and siblings and even elder Onepaw can't stop the tremble in his legs."
 
@@ -105,7 +109,7 @@ label fox_wolf:
 
     "A heavier set of mismatched steps follows. The Wolf emerges from the shadows, her blue eyes narrowing. But something is wrong, her stance is uneven."
 
-    "As she steps into the pale light, the reason becomes clear. One of her front legs is gone, chewed off just above the joint. The wound is still red and raw, evident that it only just closed."
+    "As she steps into the pale light, the reason becomes clear. One of her legs is gone, chewed off just above the joint. The wound is still red and raw, evident that it only just closed."
 
     "She circles the burrow, sniffing. Her tail flicks once before she turns a sharp gaze on the fox."
 
@@ -129,15 +133,15 @@ label fox_wolf:
 
     "The Wolf tilts her head, watching him carefully. Her muscles coil, poised to strike at the slightest provocation."
 
-    fe "Or maybe you tricked me again, Vulpes."
+    fe "Or maybe you tricked me again..."
 
     vp "Oh, please. Don't be like that. You wound me."
 
-    "He places a paw on his chest as if deeply offended, but his eyes remain sharp, calculating."
+    "He places a paw on his chest as if deeply offended, but his eyes remain sharp."
 
     "The Wolf is not amused."
 
-    fe "Tell me, Fox, how many times have I fallen for your silver tongue?"
+    fe "Tell me, {i}Fox{/i}, how many times have I fallen for your silver tongue?"
 
     "Vulpes chuckles, taking a step back."
 
@@ -165,13 +169,13 @@ label fox_wolf:
 
     "Her snarl is vicious and before the Fox can sink his teeth in, she counters. Using her momentum, she swings her weight into him, driving her shoulder against his ribs. He stumbles, thrown off balance."
 
-    "She recovers first."
+    "She recovers first. Before the Fox can even scramble to his feet, her teeth are already at his throat."
 
     "He lets out a gurgled breath. And then... silence."
 
     "The Wolf steps back, the blood from her muzzle dripping onto the fresh snow. She exhales, the cold air turning her breath into mist."
 
-    "Then, she picks up the Fox and disappears into the trees."
+    "Then, she picks up the Fox and limps off into the forest."
 
     "She won't be going hungry tonight."
 
