@@ -3,6 +3,7 @@ define wt = Character("White Tail", color="#cfcfcf")
 define op = Character("OnePaw", color="#cfcfcf")
 define fe = Character("Frost Eyes", color="#e0fffe")
 define un = Character("???", color="#ffffff")
+define vp = Character("Vulpes Fox", color="#616161")
 
 define de = Character(" ", color="#6b0000")
 
