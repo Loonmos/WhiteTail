@@ -3,8 +3,9 @@
 label end_hw_ic:
 
     "The burrow is quiet. The usual rustling of leaves and distant chirping of birds fill the air. Whitetail is among her fellow rabbits, settling into the rhythm of daily life."
+    show rabbit at left
     "A sharp cry splits the air. You run outside and see the fox. The scent of blood follows."
-    
+    show fox at right
     "Before any of the rabbits outside can flee, it strikes."
     "Sharp teeth, faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the warren."
 
@@ -26,28 +27,30 @@ label end_hw_ic:
 
     "Before the fox can strike again, another sound cuts through the air."
     "a low, deep growl. A shadow moves from the treeline."
-
+    hide fox
     "The wolf"
-
+    hide rabbit
+    show wolf at right
+    show fox at left
     "She bursts forward, teeth flashing in the dim light, slamming into the fox before it can claim another life."
     "A vicious fight follows, snarls, snapping jaws, a tangle of fur and claws"
+    hide fox
     "Silence"
-    "The wol stands there, breathing hard, blood on her muzzle."
+    "The wolf stands there, breathing hard, blood on her muzzle."
     "Not hers."
     "She turns to You, those sharp eyes locking onto yours."
     "The fox had been fast, cunning, hunting the young ones with sharp eyes and sharper teeth. But the wolf had been faster."
     "Now, the clearing is still, except for the ragged breath in your chest and the smell of blood in the air."
     "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
     "The wolf licks the blood from her muzzle, then turns to you."
-
-   show wolf at right
-   fe "Consider my debt paid, little rabbit."
+    show rabbit at left
+    show wolf at right
+    fe "Consider my debt paid, little rabbit."
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
     fe "(low, warning tone) Watch your back next time you leave this place. There are worse things than foxes in these woods."
 
     menu:
-     show rabbit at left
      "How do you respond?"
      "You saved us... Why?":
         fe "(snorts, glancing at the fox’s body) I owed you. And I pay my debts."
