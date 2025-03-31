@@ -4,11 +4,11 @@ define op = Character("OnePaw", color="#cfcfcf")
 define fe = Character("Frost Eyes", color="#e0fffe")
 define un = Character("???", color="#ffffff")
 define vp = Character("Vulpes Fox", color="#616161")
-
 define de = Character(" ", color="#6b0000")
 
 label start: # the game starts here
     play music "rickroll lofi.mp3" loop volume 0.7
+    scene forestlight
 
     menu:
         "Go to a different chapter"
@@ -56,9 +56,9 @@ label start: # the game starts here
                     "Continue"
 
 
-    scene burrow
 
     "The sun hangs low in the sky, spilling long shadows across the snowy  forest floor. The air is crisp, cool. The kind that clings to fur and whispers of the coming night."
+    show rabbit at left
     "You move carefully beneath the tangle of branches, your ears twitching with every rustle, every distant birdcall."
     "Your paws ache, and your belly gnaws with hunger, but still, you press on."
     
@@ -92,6 +92,7 @@ label Giveup1:
      jump introend
 
 label introend:
+    scene forestdark
     "You take a breath and move forward again, each step heavier than the last. The forest seems to darken around you, not yet night, but no longer day."
     "Still, you couldn’t turn back. Not without proving you can do this, on your own."
 

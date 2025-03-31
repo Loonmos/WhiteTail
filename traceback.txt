@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While parsing C:\Users\demim\OneDrive\Bureaublad\Renpy\White Tail\game/scripts/script_burrow3.rpy.
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 1464: invalid start byte
+While running game code:
+  File "game/script.rpy", line 61, in script
+    show rabbit left
+Exception: Image 'rabbit' does not accept attributes 'left'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\main.py", line 470, in main
-    renpy.game.script.load_script() # sets renpy.game.script.
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\script.py", line 359, in load_script
-    self.load_appropriate_file(".rpyc", [ "_ren.py", ".rpy" ], dir, fn, initcode)
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\script.py", line 929, in load_appropriate_file
-    data, stmts = self.load_file(dir, fn + source)
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\script.py", line 721, in load_file
-    stmts = renpy.parser.parse(fullfn)
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\parser.py", line 1685, in parse
-    lines = list_logical_lines(fn, filedata, linenumber)
-  File "C:\Users\demim\OneDrive\Documenten\renpy-8.3.6-sdk\renpy\lexer.py", line 302, in list_logical_lines
-    data = f.read().decode("utf-8", "python_strict")
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 1464: invalid start byte
+  File "game/script.rpy", line 61, in script
+    show rabbit left
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\gothj\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'rabbit' does not accept attributes 'left'.
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.6.25022803
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.7.25031702
 White Tail 1.0
-Thu Mar 27 13:06:05 2025
+Mon Mar 31 15:51:24 2025
