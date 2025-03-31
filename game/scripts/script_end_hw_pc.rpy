@@ -106,11 +106,11 @@ label fortify:
 
     "The fox is here."
 
-    "They're pounding on the barricades, snarling and trying to get in."
+    "He's pounding on the barricades, snarling and trying to get in."
 
     "Then- a loud BANG and the barricade cracks, dust and debris filling the air."
 
-    "They continue their barrage and more cracks and holes start to form."
+    "He continues his barrage and more cracks and holes start to form."
 
     menu:
         "What do you do?"
@@ -120,18 +120,18 @@ label fortify:
 
             wt "{i}I have to protect my burrow. Maybe I can hold off the fox long enough for them to escape.{/i}"
 
-            "A final snap and the barricade breaks. The fox lunges in and begins their attack."
+            "A final snap and the barricade breaks. The fox lunges in and begins his attack."
 
-            return
+            jump fox_attack
 
         "Move to back to stay a bit safer":
             "You move towards the back and elder Onepaw shoots you a disgusted glance."
 
             wt "{i}I don't want to die today. Maybe I can somehow make it out.{/i}"
 
-            "A final snap and the barricade breaks. The fox lunges in and begins their attack."
+            "A final snap and the barricade breaks. The fox lunges in and begins his attack."
 
-            return
+            jump fox_attack
 
 label other_burrow:
     wt "We have to go now! I found an abandoned burrow yesterday where we can hole up."
@@ -142,6 +142,66 @@ label other_burrow:
 
     "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow and the fox might find you."
 
-    "As you travel, you instruct the others to gather sticks and stones. By the time you get to the other burrow, you've gathered enough to make some fortifications."
+    "As you travel, you instruct the others to gather sticks and stones. Just in case the fox manages to track you down."
+
+    "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
     jump fortify
+
+label fox_attack:
+    "Sharp teeth and faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the burrow."
+
+    "Then- before the fox can strike again, another sound cuts through the air."
+    "A low, deep growl. A shadow moves from the treeline."
+    hide fox
+    "The pale-eyed wolf"
+    hide rabbit
+    show wolf at right
+    show fox at left
+    "She bursts forward, teeth flashing in the dim light, slamming into the fox before it can claim another life."
+    "A vicious fight follows, snarls, snapping jaws, a tangle of fur and claws"
+    hide fox
+    "And then- Silence..."
+    "The wolf stands there, breathing hard, blood on her muzzle."
+    "Not hers."
+    "She turns to You, those sharp eyes locking onto yours."
+    "The fox had been fast, cunning, hunting the young ones with sharp eyes and sharper teeth. But the wolf had been faster."
+    "Now, the clearing is still, except for the ragged breath in your chest and the smell of blood in the air."
+    "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
+    "The wolf licks the blood from her muzzle, then turns to you."
+    show rabbit at left
+    show wolf at right
+    fe "Consider my debt paid, little rabbit."
+
+    "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
+    fe "(low, warning tone) Watch your back next time you leave this place. There are worse things than foxes in these woods."
+
+    menu:
+    #show rabbit at left
+        "How do you respond?"
+
+        "You saved us... Why?":
+            fe "(snorts, glancing at the fox's body) I owed you. And I pay my debts."
+            "She steps over the fox's corpse, her tail flicking as she moves away."
+            fe "But don't think this means I'll always be there. Next time, you might have to fight for yourself."
+        "This doesn't make us even!":
+            "The wolf stops, ear twitching. Then she laughs, a low, dangerous sound."
+            fe "Oh? And what do you think I owe you, little rabbit? A pack at your back? A safe life?"
+            "She steps closer, her eyes gleaming"
+            fe "You helped me. I helped you. You want more than that? Then next time, be useful."
+            "She turns, padding away without waiting for an answer."
+        "I understand, thank you":
+            "The wolf studies you for a moment, then nods."
+            fe "Good. You learn fast."
+            "She steps back, looking toward the trees."
+            fe "Keep learning. Keep surviving. If you do... maybe we'll meet again."
+            "Then, without another word, she melts into the underbrush."
+        "Say nothing":
+           "The wolf lingers for a moment, tilting her head as if expecting something. But you stay quiet."
+           fe " (softly, almost to herself) Hmm... Rabbits..."
+           "Then, with a final glance at the fox's body, she disappears into the woods."
+
+    hide wolf
+    hide rabbit
+
+    return
