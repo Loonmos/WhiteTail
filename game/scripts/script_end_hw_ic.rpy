@@ -8,7 +8,7 @@ label end_hw_ic:
     "Before any of the rabbits outside can flee, it strikes."
     "Sharp teeth, faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the warren."
 
-    menu (time=3, timeout=Freeze):
+    menu (time=3, timeout="Freeze"):
          "What do you do"
             "Run for cover":
             "You dodge into the nearest burrow entrance. And try to hide."
@@ -40,12 +40,14 @@ label end_hw_ic:
     "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
     "The wolf licks the blood from her muzzle, then turns to you."
 
-    fe "Consider my debt paid, little rabbit."
+   show wolf at right
+   fe "Consider my debt paid, little rabbit."
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
     fe "(low, warning tone) Watch your back next time you leave this place. There are worse things than foxes in these woods."
 
     menu:
+     show rabbit at left
      "How do you respond?"
      "You saved us... Why?":
         fe "(snorts, glancing at the fox’s body) I owed you. And I pay my debts."
@@ -68,5 +70,7 @@ label end_hw_ic:
        fe " (softly, almost to herself) Hmm... Rabbits..."
        "Then, with a final glance at the fox’s body, she disappears into the woods."
 
+    hide wolf
+    hide rabbit
 
     return
