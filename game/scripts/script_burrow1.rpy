@@ -33,13 +33,23 @@ label burrow1:
 
     op "(Snorts)"
     op "Hmph. So you ran. And she let you..."
+
+    menu:
+        "Agree":
+            jump agree1
+        "Disagree":
+            jump disagree1
     
-    wt "I.. No! She was hunting me! I barely got away..."
+    label disagree1:
+        wt "I.. No! She was hunting me! I barely got away..."
+        op "(Shakes his head, scoffs)"
+        op "If she wanted you, you'd be in her belly Whitetail. She doesn't let her pray go, not unless she means to. She won't forget you."
+        "You stare at him, unsure. Onepaw leans forward slightly, his gaze sharp and cold."
 
-    op "(Shakes his head, scoffs)"
-    op "If she wanted you, you'd be in her belly Whitetail. She doesn't let her pray go, not unless she means to. She won't forget you."
-
-    "You stare at him, unsure. Onepaw leans forward slightly, his gaze sharp and cold."
+    label agree1:
+        wt "Yes, I'm sorry Onepaw"
+        "Onepaw looks at you for a second, relaxing a bit"
+        
 
     op "I know her. I know her patience. The way she plays with us, lets us run, lets us think we've won, just so she can take more from us later."
     op "She took my paw, yes. But before that? She took my trust."

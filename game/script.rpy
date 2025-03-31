@@ -15,7 +15,6 @@ label start: # the game starts here
     "You move carefully beneath the tangle of branches, your ears twitching with every rustle, every distant birdcall."
     "Your paws ache, and your belly gnaws with hunger, but still, you press on."
     
-    wt "{i} Not yet... I can’t go back yet.{/i}"
 
     menu:
         "What do I do?"
@@ -24,17 +23,19 @@ label start: # the game starts here
             jump KeepSearching1
 
 
-        "Go back":
-            jump Goback1
+        "Give up":
+            jump Giveup1
     
 
 label KeepSearching1:
+        wt "{i} Not yet... I can’t go back yet.{/i}"
+
         "You pause at the base of a leaning tree, nose twitching as you scan the ground for anything edible, roots, seeds, even the brittle ends of last season’s leaves. "
 
         "Nothing..."
         jump introend
 
-label Goback1:
+label Giveup1:
      wt "{i} The others found something, I know they did. Elder Onepaw will not approve if I come back empty handed.{/i}"
 
      "A cold breeze slips through the trees, stirring the freshly fallen powder snow at your feet."
