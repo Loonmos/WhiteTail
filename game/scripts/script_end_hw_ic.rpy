@@ -50,9 +50,9 @@ label end_hw_ic:
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
     fe "(low, warning tone) Watch your back next time you leave this place. There are worse things than foxes in these woods."
-
+    show rabbit at left
     menu:
-    #show rabbit at left
+    
         "How do you respond?"
 
         "You saved us... Why?":
