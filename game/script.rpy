@@ -10,6 +10,52 @@ define de = Character(" ", color="#6b0000")
 label start: # the game starts here
     play music "rickroll lofi.mp3" loop volume 0.7
 
+    menu:
+        "Go to a different chapter"
+
+        "Wolf 1":
+            jump wolf1
+
+        "Burrow 1":
+            jump burrow1
+
+        "Crows":
+            jump crows
+
+        "Burrow 2":
+            jump burrow2
+
+        "Wolf 2":
+            jump wolf2
+
+        "Burrow 3":
+            jump burrow3
+
+        "Next Options":
+            menu:
+
+                "Fox":
+                    jump fox
+
+                "Burrow 4":
+                    jump burrow4
+
+                "Ending Help and Pay":
+                    jump end_hw_pc
+
+                "Ending Help and Ignore":
+                    jump end_hw_ic
+
+                "Ending Leave and Pay":
+                    jump end_lw_pc
+
+                "Ending Leave and Ignore":
+                    jump end_lw_ic
+
+                "Continue here":
+                    "Continue"
+
+
     scene burrow
 
     "The sun hangs low in the sky, spilling long shadows across the snowy  forest floor. The air is crisp, cool. The kind that clings to fur and whispers of the coming night."
