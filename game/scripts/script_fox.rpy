@@ -105,7 +105,45 @@ label fox_choice2:
             jump bravado2
 
 label fox_choice3:
-    #menu:
+     menu:
+        "Negotiate with Vulpes (second option)":
+            vp "(Leaning in closer, his sharp eyes narrowing as he watches White Tail, a grin slowly spreading across his face.)"
+            vp "You’re offering a deal? A deal from a rabbit?"
+            vp "(He chuckles to himself, as if the idea amuses him.)"
+            vp "I have to admit, you’ve got guts, little one."
+            "(Vulpes stretches out, lazily circling the food pile, tapping a paw on a small carrot, picking it up and inspecting it before playfully tossing it from paw to paw.)"
+            vp "You're right. There is plenty of food in this burrow, but it’s not about the food, is it? You’re trying to find a way to save that fluffy little tail of yours."
+            vp "(He pauses, giving White Tail a long, calculating stare.)"
+            vp "Seems like you’re not as scared as I thought... Or maybe you’re just really bad at negotiating."
+            wt "(His eyes flicker, assessing the situation, but staying composed. He gives a nonchalant shrug.)"
+            wt "I’m not scared... Not when I know how to play the game."
+            "(White Tail takes a step back, eyeing Vulpes, his gaze flicking to the side, clearly thinking.)"
+            wt "But you know, I’m sure there’s better prey out there. A nest of possums, for example. Nice and fattened up, not too quick to escape. You wouldn’t even have to chase them... You’d be done in a minute, probably less."
+            vp "(His ears twitch at the mention of the possums. The idea clearly catches his attention, his tail flicking in thought as he slows down.)"
+            vp "A nest of possums, huh?"
+            vp "(He licks his lips, tail swishing with interest.)"
+            vp "Sounds delicious… and easy."
+            vp "(He looks back at White Tail, who is holding her breath, hoping the bluff works.)"
+            vp "But how do I know you’re not just trying to send me on a wild goose chase?"
+            wt "(Grinning slyly, but trying to keep up the act.)"
+            wt "Would I lie about such a thing? I’m just a simple rabbit. I don't have anything to gain by sending you off in the wrong direction..."
+            wt "(White Tail gives a nonchalant wink and twitches his nose.)"
+            wt "You are a fox, after all, and surely you like an easy meal over a stubborn rabbit."
+            vp "(After a long pause, he looks like he’s about to dismiss the idea, but his curiosity gets the better of him.)"
+            vp "Maybe... maybe you’re right. An easy meal would be better than wasting time with a stubborn rabbit."
+            vp "(Vulpes looks toward the forest, sniffing the air as if trying to track the scent of the possums.)"
+            vp "Alright, fine. You’ve piqued my interest, little bunny. I’ll let you go... for now."
+            vp "(He begins to stalk off, following the vague direction White Tail pointed toward, already losing interest in the rabbit for the moment.)"
+            jump burrow4
+
+
+        "Take the chance and escape, but...":
+             "White Tail thinks she's outsmarted Vulpes, but as she tries to dash out with a small stash of food in her paws, the fox's sharp eyes turn back to her."
+             "The chase is on. White Tail runs faster than she ever has before, but Vulpes is swift, and with a few well-placed leaps, the fox catches up."
+            vp "White Tail feels a sharp bite at her tail before his world goes black."
+            vp "Well... that’s the end little bunny rabbit."
+            jump death_scene2
+
 
 label tension_scene:
     # The build-up of tension between White Tail and Vulpes
@@ -151,7 +189,7 @@ label death_scene2:
     "You died..."
     menu:
         "Go back to the last choice":
-            jump fox_choice2
+            jump fox_choice3
         "Go back to the beginning of the chapter":
             jump fox
 
@@ -162,6 +200,6 @@ label negotiation_outcome:
     "If White Tail plays it right, they might just slip away."
     jump fox_choice3
 
-label fox_outcome:
-    "Depending on previous choices, White Tail either tricks the fox or gains a dangerous ally."
-    "Regardless, Vulpes' golden eyes will always watch the burrow. The fox never forgets a scent."
+# label fox_outcome:
+   # "Depending on previous choices, White Tail either tricks the fox or gains a dangerous ally."
+    #"Regardless, Vulpes' golden eyes will always watch the burrow. The fox never forgets a scent."
