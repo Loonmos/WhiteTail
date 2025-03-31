@@ -16,18 +16,34 @@ label start: # the game starts here
     "Your paws ache, and your belly gnaws with hunger, but still, you press on."
     
     wt "{i} Not yet... I can’t go back yet.{/i}"
+
+    menu:
+        "What do I do?"
+
+        "Keep searching":
+            jump KeepSearching1
+
+
+        "Go back":
+            jump Goback1
     
-    "You pause at the base of a leaning tree, nose twitching as you scan the ground for anything edible, roots, seeds, even the brittle ends of last season’s leaves. "
 
-    "Nothing..."
+label KeepSearching1:
+        "You pause at the base of a leaning tree, nose twitching as you scan the ground for anything edible, roots, seeds, even the brittle ends of last season’s leaves. "
 
-    wt "{i} The others found something, I know they did. Elder Onepaw will not approve if I come back empty handed.{/i}"
+        "Nothing..."
+        jump introend
 
-    "A cold breeze slips through the trees, stirring the freshly fallen powder snow at your feet."
-    "Your shivers, but your jaw tightens with determination. You glance at the sinking sun, eyes narrowing."
+label Goback1:
+     wt "{i} The others found something, I know they did. Elder Onepaw will not approve if I come back empty handed.{/i}"
 
-    wt "{i}Just a little further. Just a little more… then I’ll go back. Then I can be proud and the others won't be hungry.{/i}"
+     "A cold breeze slips through the trees, stirring the freshly fallen powder snow at your feet."
+     "Your shivers, but your jaw tightens with determination. You glance at the sinking sun, eyes narrowing."
 
+     wt "{i}Just a little further. Just a little more… then I’ll go back. Then I can be proud and the others won't be hungry.{/i}"
+     jump introend
+
+label introend:
     "You take a breath and move forward again, each step heavier than the last. The forest seems to darken around you, not yet night, but no longer day."
     "Still, you couldn’t turn back. Not without proving you can do this, on your own."
 
