@@ -131,7 +131,7 @@ label fox_wolf:
 
     fe "Or maybe you tricked me again, Vulpes."
 
-    vp "Oh, please. Don’t be like that. You wound me."
+    vp "Oh, please. Don't be like that. You wound me."
 
     "He places a paw on his chest as if deeply offended, but his eyes remain sharp, calculating."
 
@@ -141,11 +141,11 @@ label fox_wolf:
 
     "Vulpes chuckles, taking a step back."
 
-    vp "Oh, don’t be dramatic. What would I possibly gain from deceiving you?"
+    vp "Oh, don't be dramatic. What would I possibly gain from deceiving you?"
 
     "The Wolf's lip curls into a sadistic grin."
 
-    fe "Last time, it cost me a meal. This time, it won’t."
+    fe "Last time, it cost me a meal. This time, it won't."
 
     "The Fox' eyes widen slightly. He moves to speak, but the Wolf is faster."
 
@@ -161,7 +161,11 @@ label fox_wolf:
 
     "He moves faster now, taking advantage of the opportunity. In a blur of red fur and flashing teeth, he twists, aiming for her neck."
 
-    "But she is stronger and he knows this too."
+    "But pain is hardly something that stops the Wolf."
+
+    "Her snarl is vicious and before the Fox can sink his teeth in, she counters. Using her momentum, she swings her weight into him, driving her shoulder against his ribs. He stumbles, thrown off balance."
+
+    "She recovers first."
 
     "He lets out a gurgled breath. And then... silence."
 
