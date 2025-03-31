@@ -19,50 +19,68 @@ label burrow3_help:
 
     op "Hmph. You did bring something back, at least. Perhaps I underestimated you."
 
-    wt "(Quietly) I didn't get it on my own"
+    menu:
+     "Tell Onepaw about helping the wolf.":
+        jump Behonest1
+     "Try to lie about it.":
+        jump Trylie1
 
-    op "(Ears flicking) Oh? And what exactly, does that mean?"
+    label Behonest1:
+        wt "(Quietly) I didn't get it on my own"
 
-    wt "(Takes a breath) I helped her. The wolf. She was trapped, and she aallowed me to gather some food in that area."
+        op "(Ears flicking) Oh? And what exactly, does that mean?"
 
-    "Silence. Onepaw stares at her, unblinking, before his good paw clenches slightly "
+        wt "(Takes a breath) I helped her. The wolf. She was trapped, and she allowed me to gather some food in that area."
 
-    op "Tell me it isn't true"
+        "Silence. Onepaw stares at her, unblinking, before his good paw clenches slightly "
+        jump continueburrow3
 
-    wt "(Steady but wary) I did what I thought was right"
+    label Trylie1:
+        wt "Yes... I... I met the wolf again... but she was trapped and... "
+        " And I left her there and she got what she deserved!"
 
-    op "Right..."
+        wt "{i}What am I thinking, that didn't sound convincing at all, He'll see right through me..."
 
-    "Onepaw rises slightly, his voice edged with disbelief, perhaps even anger."
+        "A tense moment of silence"
+        jump continueburrow3
 
-    op "I knew you were young, but I did not think you were a fool. You helped her?! The same creature that tore through our kind like dry grass? The same teeth that decommissioned me?!"
+    label continueburrow3:    
+        op "Tell me it isn't true"
 
-    "(Your ears twitch, but you stand firm.)"
+        wt "(Steady but wary) I did what I thought was right"
 
-    wt "She was trapped. Helpless. I couldn't just..."
+        op "Right..."
 
-    op "(Interupting) Oh, you could have! You should have! You think she would've spared you, given the chance? No. That beast would've swallowed you whole and left your bones to the crows."
+        "Onepaw rises slightly, his voice edged with disbelief, perhaps even anger."
 
-    "A silence stretches between them. Your breath is heavy, your paws tense."
+        op "I knew you were young, but I did not think you were a fool. You helped her?! The same creature that tore through our kind like dry grass? The same teeth that decommissioned me?!"
 
-    wt "(Softer, but firm) Maybe. But I don't think so. Not this time. I made a choice. Not out of fear, not because I was weak, but because I believe it meant something."
+        "(Your ears twitch, but you stand firm.)"
 
-    "Onepaw's nose twitches. His whiskers flick. He exhales sharply, his gaze scrutinizing, searching her face."
+        wt "She was trapped. Helpless. I couldn't just..."
 
-    op "You believe?..."
+        op "(Interupting) Oh, you could have! You should have! You think she would've spared you, given the chance? No. That beast would've swallowed you whole and left your bones to the crows."
 
-    wt "Yes."
+        "A silence stretches between them. Your breath is heavy, your paws tense."
 
-    "For a long moment, he says nothing. Then, with a tired sigh, he eases himself back down, shaking his head."
+        wt "(Softer, but firm) Maybe. But I don't think so. Not this time. I made a choice. Not out of fear, not because I was weak, but because I believe it meant something."
 
-    op "Belief won't fill our bellies"
+        "Onepaw's nose twitches. His whiskers flick. He exhales sharply, his gaze scrutinizing, searching her face."
 
-    wt "Maybe not. But it might change the future."
+        op "You believe?..."
 
-    "Onepaw doesn't reply immediately. His good paw presses against the ground, thoughtful."
-    "Then, with the smallest, almost imperceptible nod, he looks at her again, not with approval, but with something closer to reluctant trust."
+        wt "Yes."
 
-    op "Then I hope, for all our sakes, that you're right."
+        "For a long moment, he says nothing. Then, with a tired sigh, he eases himself back down, shaking his head."
+
+        op "Belief won't fill our bellies"
+
+        wt "Maybe not. But it might change the future."
+
+        "Onepaw doesn't reply immediately. His good paw presses against the ground, thoughtful."
+        "Then, with the smallest, almost imperceptible nod, he looks at her again, not with approval, but with something closer to reluctant trust."
+
+        op "Then I hope, for all our sakes, that you're right."
 
 
 
@@ -83,13 +101,16 @@ label burrow3_leave:
 
    op "Not much..."
 
-   wt " No, I lost time."
+   wt "No, I lost time."
 
    op "(examining you closely) Oh? And what, exactly, took your time?"
+
+   menu:
+    "Tell Onepaw about leaving the wolf in the trap":
    
-   "You hesitate, then straighten your posture."
+        "You hesitate, then straighten your posture."
    
-   wt "I found her. The wolf. She was caught in a poachers trap"
+    wt "I found her. The wolf. She was caught in a poachers trap"
 
    "Onepaw doesn't move, his gaze sharpening"
 

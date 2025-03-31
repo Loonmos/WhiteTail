@@ -46,6 +46,8 @@ label wolf1:
 
     fe "No scars, little food and an all consuming fear."
 
+    "You see a bloodthirsty gleam in her eyes... She is ready to pounce."
+
     menu:
         "What should I do?"
 
