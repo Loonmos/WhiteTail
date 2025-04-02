@@ -5,7 +5,7 @@ define fe = Character("Frost Eyes", color="#e0fffe")
 define un = Character("???", color="#ffffff")
 define vp = Character("Vulpes Fox", color="#616161")
 define de = Character(" ", color="#6b0000")
-
+define sp = Character("Softpaw", color="#cfcfcf" )
 label start: # the game starts here
     play music "rickroll lofi.mp3" loop volume 0.7
     scene forestlight
