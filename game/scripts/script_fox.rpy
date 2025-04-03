@@ -4,8 +4,6 @@ define wt = Character("White Tail", color="#A0A0A0")
 label fox:
     scene burrowoutside with fade
     
-    show rabbit at left
-    
 
     "Surrounded by dying leaves, their colors mirroring the late fall sunset, you stumble upon a hole in the cold soil."
     "A faintly familiar scent lingers in the air-something you can't quite place."
@@ -23,6 +21,10 @@ label fox:
 
         "Enter the burrow":
             "You seem determined to go into the burrow no matter what. A brave rabbit isn't afraid!"
+    
+            
+    scene burrowinside with fade
+    show rabbit at left
 
     "As you wander in, the smell of cold, overturned soil feels strange. A burrow should be warm, lived in... this one is wrong."
     "The scent of your kind is here, but so is something else. Something weightier. A muskier scent laced with the sharp tang of flesh."
@@ -91,13 +93,13 @@ label fox_choice2:
             "He tilts his head, intrigued."
             jump tension_scene
         
-        "Negotiate":
+        "Bluff":
             wt "From the scent of it, there's plenty of food in this burrow. But I think you've got more than just me to choose from."
             vp "You're offering a deal? Trying to barter, hmm? Daring little bunny, aren't you?"
             "Vulpes eyes White Tail carefully."
             vp "Clever. Very clever."
             vp "But cleverness... isn't the same as safety."
-            jump negotiation_outcome
+            jump fox_choice3
         
         "Stand their ground":
             wt "If you think you can scare me, you're wasting your time. I know how to handle foxes."
@@ -105,44 +107,114 @@ label fox_choice2:
             jump bravado2
 
 label fox_choice3:
-     menu:
-        "Negotiate with Vulpes (second option)":
-            vp "(Leaning in closer, his sharp eyes narrowing as he watches White Tail, a grin slowly spreading across his face.)"
-            vp "You're offering a deal? A deal from a rabbit?"
-            vp "(He chuckles to himself, as if the idea amuses him.)"
-            vp "I have to admit, you've got guts, little one."
-            "(Vulpes stretches out, lazily circling the food pile, tapping a paw on a small carrot, picking it up and inspecting it before playfully tossing it from paw to paw.)"
-            vp "You're right. There is plenty of food in this burrow, but it's not about the food, is it? You're trying to find a way to save that fluffy little tail of yours."
-            vp "(He pauses, giving White Tail a long, calculating stare.)"
-            vp "Seems like you're not as scared as I thought... Or maybe you're just really bad at negotiating."
-            wt "(His eyes flicker, assessing the situation, but staying composed. He gives a nonchalant shrug.)"
-            wt "I'm not scared... Not when I know how to play the game."
-            "(White Tail takes a step back, eyeing Vulpes, his gaze flicking to the side, clearly thinking.)"
-            wt "But you know, I'm sure there's better prey out there. A nest of possums, for example. Nice and fattened up, not too quick to escape. You wouldn't even have to chase them... You'd be done in a minute, probably less."
-            vp "(His ears twitch at the mention of the possums. The idea clearly catches his attention, his tail flicking in thought as he slows down.)"
-            vp "A nest of possums, huh?"
-            vp "(He licks his lips, tail swishing with interest.)"
-            vp "Sounds delicious... and easy."
-            vp "(He looks back at White Tail, who is holding her breath, hoping the bluff works.)"
-            vp "But how do I know you're not just trying to send me on a wild goose chase?"
-            wt "(Grinning slyly, but trying to keep up the act.)"
-            wt "Would I lie about such a thing? I'm just a simple rabbit. I don't have anything to gain by sending you off in the wrong direction..."
-            wt "(White Tail gives a nonchalant wink and twitches his nose.)"
-            wt "You are a fox, after all, and surely you like an easy meal over a stubborn rabbit."
-            vp "(After a long pause, he looks like he's about to dismiss the idea, but his curiosity gets the better of him.)"
-            vp "Maybe... maybe you're right. An easy meal would be better than wasting time with a stubborn rabbit."
-            vp "(Vulpes looks toward the forest, sniffing the air as if trying to track the scent of the possums.)"
-            vp "Alright, fine. You've piqued my interest, little bunny. I'll let you go... for now."
-            vp "(He begins to stalk off, following the vague direction White Tail pointed toward, already losing interest in the rabbit for the moment.)"
-            jump burrow4
+    menu:
+        "I think I saw something just ahead...":
+            $ fox_believes = True
+            jump fox_possum_story
+        
+        "I won't go down easily!":
+            jump fox_fight
+        
+        "...":
+            jump fox_cower
+
+label fox_possum_story:
+    "You meet the fox's gaze, keeping your voice steady. 'A family of opossums, actually. Fat and slow. Nesting near the old oak past the burrows."
+
+    vp "A family? Sounds like quite the feast."
+
+    "But it doesn't move yet. You can see the calculation behind its eyes, weighing hunger against suspicion."
+
+    vp "Are you sure? You wouldn't be leading me on now, would you?"
+
+    "The burrow around you is full. A pile of food-scraps of fur, gnawed bones, half-eaten roots and berries-sits behind the fox, a testament to its successful hunts. If you can convince it to leave, even for a little while, you might just walk out of here with enough to sustain yourself."
+
+    menu:
+        "Oh, absolutely. I saw them just this morning-six of them, round as the moon!":
+            jump bluff_too_hard
+
+        "I don't know, maybe they moved... but they were there yesterday.":
+            jump keep_it_vague
+
+label bluff_too_hard:
+    vp "Six of them, round as the moon? Funny, I've never seen that many fat opossums in one place."
+
+    vp "You're lying."
+
+    "It doesn't even sound angry. Just... patient. The way a predator gets when it knows its prey is tiring itself out."
+
+    "Then, before you can run-before you can even breathe-it moves."
+
+    "You're caught. The fox isn't as easy to fool as you thought."
+    jump death_scene3
+
+label keep_it_vague:
+    "You shrug, keeping your tone casual. I don't know, maybe they moved... but they were there yesterday.'"
+
+    vp "I suppose it's worth a look."
+
+    "It stands, shakes out its fur, and leaves."
+
+    "For a moment, you don't move. You just listen-wait-until the sound of the fox's pawsteps fades into the underbrush."
+
+    "Then, quickly, quietly, you turn toward the pile."
+
+    "It's more than just food. This is wealth. Stored meals. Security. Everything the fox has gathered-whether by hunting, stealing, or sheer luck-its here in a careless heap."
+
+    "And now, some of it will be yours."
+
+    "You don't take too much. Just enough. Enough to last. Enough to make the risk worth it."
+
+    "Then you slip away, stomach full, paws light."
+
+    "But as you leave, something gnaws at the back of your mind."
+
+    "The fox will remember this."
+
+    "(You escape with food, but the fox knows your scent now. You may not be so lucky next time.)"
+    jump burrow4
 
 
-        "Take the chance and escape, but...":
-            "White Tail thinks she's outsmarted Vulpes, but as she tries to dash out with a small stash of food in her paws, the fox's sharp eyes turn back to her."
-            "The chase is on. White Tail runs faster than she ever has before, but Vulpes is swift, and with a few well-placed leaps, the fox catches up."
-            vp "White Tail feels a sharp bite at her tail before his world goes black."
-            vp "Well... that's the end little bunny rabbit."
-            jump death_scene2
+label fox_fight:
+    "A shiver crawls up your spine, but instead of surrendering to it, you dig your heels into the dirt. If you're going down, you're going down fighting."
+
+    "Your muscles tense, your heartbeat a wild drum in your chest. The fox notices the shift, its smirk faltering for the briefest moment."
+
+    vp "Oh? You're not the usual kind, are you?"
+
+    "It lunges."
+
+    "You duck-barely. Claws rake the air where your head was a heartbeat ago. Your body moves on instinct, twisting, scrambling, kicking up dirt. You don't have strength, not like the fox, but you have desperation."
+
+    "A snap of teeth too close to your ear. A lucky kick to the snout. A pained yelp."
+
+    "You run. You don't look back."
+
+    "Breath burning, legs trembling, you only stop when your lungs scream and your vision blurs. The scent of fox lingers in the air, but you're not dead. Not yet."
+
+    "You escape, but you're left shaken, scratched, and very, very aware of how close you came to being dinner."
+    jump burrow4
+    return
+
+label fox_cower:
+    "Your breath catches in your throat. Every nerve screams at you to move, but you can't. The fox sees it immediately."
+
+    vp "Ah, I do love the ones who know their place."
+
+    "It doesn't rush."
+
+    "A slow step. Then another."
+
+    "You want to plead, but your tongue is heavy. You want to run, but your legs have turned to stone."
+
+    "The fox tilts its head, watching, waiting. Then, with the smoothness of something that has done this a thousand times before-"
+
+    "It strikes."
+
+    "You die. The fox is full. The night is quiet once more."
+    jump death_scene3
+
+
 
 
 label tension_scene:
@@ -150,13 +222,13 @@ label tension_scene:
     "Vulpes' voice is smooth like honey, but with a dangerous undertone. Every word that escapes his mouth feels like a trap."
     "The air seems to grow heavier, thicker with uncertainty as the fox steps forward, closing the distance."
     "You feel the hairs on the back of your neck rise, the stillness amplifying your every movement."
-    wt "White Tail remains motionless, heart pounding, eyes scanning for any opening."
-    vp "The fox's grin sharpens, as if savoring the suspense. He doesn't say a word, only watching you closely."
-    vp "(After a long moment, Vulpes tilts his head, his voice dripping with amusement.)"
+    "White Tail remains motionless, heart pounding, eyes scanning for any opening."
+    "The fox's grin sharpens, as if savoring the suspense. He doesn't say a word, only watching you closely."
+    "(After a long moment, Vulpes tilts his head, his voice dripping with amusement.)"
     vp "Well, little rabbit, it seems you've run out of tricks. But I don't mind playing a little longer. You've earned this moment, for now."
     wt "(In a steady, calm voice) Not out of tricks yet, fox."
-    vp "He chuckles. The silence stretches, the forest's sounds distant, but your pulse is a steady drumbeat in your ears."
-    vp "You can't wait much longer. What will you do?"
+    "He chuckles. The silence stretches, the forest's sounds distant, but your pulse is a steady drumbeat in your ears."
+    "You can't wait much longer. What will you do?"
     jump fox_choice3
 
 label bravado1:
@@ -169,7 +241,7 @@ label bravado2:
     "You've shown your utmost courage to the fox! But Vulpes senses your fear."
     "In a swift motion, you try to bolt for the entrance, but like a strike of lightning, the fox pounces at your tail."
     "You're dragged down further into the burrow and killed swiftly with a bite to the neck. Foxes like efficiency."
-    jump death_scene1
+    jump death_scene2
 
 label death_scene1:
     hide rabbit
@@ -183,6 +255,18 @@ label death_scene1:
             jump fox
 
 label death_scene2:
+    hide rabbit
+    hide fox
+    scene heaven
+    "You died..."
+    menu:
+        "Go back to the last choice":
+            jump fox_choice2
+        "Go back to the beginning of the chapter":
+            jump fox
+
+
+label death_scene3:
     hide rabbit
     hide fox
     scene heaven
