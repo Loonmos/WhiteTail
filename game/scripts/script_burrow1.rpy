@@ -1,10 +1,9 @@
 
-
 label burrow1:
     scene burrowinside
 
-    show rabbit at left
-    show rabbit2 at right
+    show rabbit burrow left
+    show onepaw burrow right
 
     "The burrow is dimly lit, warmed by the presence of its inhabitants."
     "Whitetail stands near the entrance, your fur bristling with cold, paws empty."
@@ -67,8 +66,5 @@ label burrow1:
     
     op "(Scoffs and turns away)"
     op "First day out, and already you've lost. I only wonder what it cost the rest of us."
-
-    hide rabbit
-    hide rabbit2
 
     jump crows

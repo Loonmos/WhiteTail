@@ -1,3 +1,4 @@
+
 define help_wolf = False
 
 label wolf2:
@@ -7,7 +8,7 @@ label wolf2:
 
     "Out of curiosity you come a bit closer."
 
-    show rabbit
+    show rabbit forest mid
 
     wt "{i}It's her.{/i}"
 
@@ -21,8 +22,8 @@ label wolf2:
 
     "She lifts herself up again, chin high and ears pricked forward. But her eyes, wide and filled with pain, betray her."
 
-    show wolf at right
-    show rabbit at left
+    show wolf2 forest right
+    show rabbit forest left
 
     fe "And so we meet again, little rabbit."
 
@@ -105,9 +106,6 @@ label wolf_help:
     "The wolf stalks off, limping heavily and leaving a bloody trail."
 
     wt "{i}I hope she keeps her promise... But for now, I'm safe and I have enough food to feed myself and the burrow.{/i}"
-    
-    hide rabbit
-    hide wolf
 
     jump burrow3
 
@@ -143,8 +141,5 @@ label wolf_leave:
     fe "When I get out of here, you are done little rabbit."
 
     wt "{i}If she gets out of there... I might be hungry tonight, but I'm safe and that's the most important.{/i}"
-
-    hide rabbit
-    hide wolf
 
     jump burrow3

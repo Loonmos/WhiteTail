@@ -1,11 +1,15 @@
-﻿# define all game characters here
+﻿# Define all game characters here
 define wt = Character("White Tail", color="#cfcfcf")
 define op = Character("OnePaw", color="#cfcfcf")
 define fe = Character("Frost Eyes", color="#e0fffe")
 define un = Character("???", color="#ffffff")
-define vp = Character("Vulpes Fox", color="#616161")
-define de = Character(" ", color="#6b0000")
+define vp = Character("Vulpes Fox", color="#592213")
 define sp = Character("Softpaw", color="#cfcfcf" )
+define c1 = Character("Shadewing", color="#616161")
+define c2 = Character("Tailbone", color="#616161")
+define c3 = Character("Ribcage", color="#616161")
+define c4 = Character("Talonskull", color="#616161")
+
 label start: # the game starts here
     play music "rickroll lofi.mp3" loop volume 0.7
     scene forestlight
@@ -58,7 +62,7 @@ label start: # the game starts here
 
 
     "The sun hangs low in the sky, spilling long shadows across the snowy  forest floor. The air is crisp, cool. The kind that clings to fur and whispers of the coming night."
-    show rabbit at left
+    show rabbit forest mid with dissolve
     "You move carefully beneath the tangle of branches, your ears twitching with every rustle, every distant birdcall."
     "Your paws ache, and your belly gnaws with hunger, but still, you press on."
     
@@ -92,7 +96,7 @@ label Giveup1:
      jump introend
 
 label introend:
-    scene forestdark
+    scene forestdark with dissolve
     "You take a breath and move forward again, each step heavier than the last. The forest seems to darken around you, not yet night, but no longer day."
     "Still, you couldn’t turn back. Not without proving you can do this, on your own."
 

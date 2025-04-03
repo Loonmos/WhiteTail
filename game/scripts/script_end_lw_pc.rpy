@@ -6,6 +6,8 @@ label end_lw_pc:
 
     "You've been out here for a while now and your bundle is filled with food."
 
+    show rabbit forest mid
+
     wt "{i}I'm finally getting the hang of this.{/i}"
     
     # cawing sounds
@@ -51,6 +53,8 @@ label end_lw_pc:
 
 label arrive_at_burrow2:
     scene burrowinside
+    show rabbit burrow left
+
     wt "The fox and the wolf! They're coming!"
 
     "Panic quickly spreads through the burrow. Some rabbits look ready to flee, some run to the entrance to look outside, others run towards the children."
@@ -60,7 +64,8 @@ label arrive_at_burrow2:
     jump other_burrow2
 
 label other_burrow2:
-    scene burrowinside
+    #move whitetail
+
     wt "Everyone listen to me!"
 
     "The rabbits stop what they're doing and turn their heads towards you."    
@@ -71,9 +76,16 @@ label other_burrow2:
 
     wt "Gather what you can and follow me."
 
+    scene forestlight
+    show rabbit forest left
+    show softpaw forest mid
+    show onepaw forest right
+
     "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow means the predators finding you."
 
     "As you travel, you instruct the others to gather sticks and stones. Just in case they manage to track you down."
+
+    scene burrowoutside
 
     "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
@@ -81,6 +93,10 @@ label other_burrow2:
 
 label fortify2:
     scene burrowinside
+    show rabbit burrow left
+    show softpaw burrow left
+    show onepaw burrow right
+
     "After a while, you have no more resources to build with and the barricade is finished."
 
     "Everyone goes inside and huddles together. The air is tense, the barricade is pretty sturdy but can it withstand the force of two predators?"
@@ -95,13 +111,20 @@ label fortify2:
 
     wt "{i}Did we survive?{/i}"
 
+    jump ending_lw_pc
+
+label ending_lw_pc:
+    "People love you yayyy"
+
     jump fox_wolf
 
 label fox_wolf:
-    scene forestlight
+    scene burrowoutside
     "A couple hours ago..."
 
     "The snow falls in gentle flakes, covering the burrow's entrance in a fresh white layer."
+
+    show fox entrance left
 
     "Red fur emerges from the tree line."
 
@@ -110,6 +133,8 @@ label fox_wolf:
     vp "No scent... Where are they?"
 
     "He steps forward, brushing the snow away with his paw. Nothing. The den is empty."
+
+    show wolf entrance right
 
     "A heavier set of mismatched steps follows. The Wolf emerges from the shadows, her blue eyes narrowing. But something is wrong, her stance is uneven."
 

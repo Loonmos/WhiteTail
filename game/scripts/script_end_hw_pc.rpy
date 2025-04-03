@@ -1,10 +1,14 @@
 # this is the ending in which you help the wolf and pay the crows
 
+define stepped_up = False
+
 label end_hw_pc:
     scene forestlight
     "The sun is starting to set, casting its long shadows across the forest floor."
 
     "You've been out here for a while now and your bundle is filled with food."
+
+    show rabbit forest mid
 
     wt "{i}I'm finally getting the hang of this.{/i}"
     
@@ -50,6 +54,9 @@ label end_hw_pc:
             jump arrive_at_burrow
 
 label arrive_at_burrow:
+    scene burrowinside
+    show rabbit burrow left
+
     wt "The fox! The fox is coming!"
 
     "Panic quickly spreads through the burrow. Some rabbits look ready to flee, some run to the entrance to look outside, others run towards the children."
@@ -60,6 +67,10 @@ label arrive_at_burrow:
         "What do you do?"
 
         "Gather everyone's attention":
+            # move whitetail
+
+            $ stepped_up = True
+
             wt "Everyone listen to me!"
 
             "The rabbits stop what they're doing and turn their heads towards you."
@@ -74,6 +85,8 @@ label arrive_at_burrow:
 
                     "The others nod. They are determined, but the fear is evident in their eyes."
 
+                    hide rabbit
+
                     "You and the others gather sticks, stones and anything else that can help reinforce the burrow's entrance."
 
                     jump fortify
@@ -86,9 +99,15 @@ label arrive_at_burrow:
 
             "You see elder Onepaw and he looks at you in disappointment."
 
+            show onepaw burrow right
+
             "(Onepaw gathers everyone's attention and tells them to fortify the burrow.)"
 
+            hide onepaw
+
             "The other rabbits agree, but you can feel the fear in the air."
+
+            scene burrowoutside
 
             "You and the others gather sticks, stones and anything else that can help reinforce the burrow's entrance."
 
@@ -96,6 +115,11 @@ label arrive_at_burrow:
 
 label fortify:
     "After a while, one of the other rabbits shouts in alarm: The fox has been spotted..."
+
+    scene burrowinside
+    show rabbit burrow left
+    show softpaw burrow left
+    show onepaw burrow right
 
     "Everyone runs inside and groups together. The air is tense, the barricade isn't perfect and everyone hopes it will hold up."
 
@@ -117,6 +141,7 @@ label fortify:
         "What do you do?"
 
         "Move to the front to fend off the fox":
+            # move whitetail
             "You move towards the front and the other rabbits look at you with respect."
 
             wt "{i}I have to protect my burrow. Maybe I can hold off the fox long enough for them to escape.{/i}"
@@ -126,6 +151,7 @@ label fortify:
             jump fox_attack
 
         "Move to back to stay a bit safer":
+            # move whitetail
             "You move towards the back and elder Onepaw shoots you a disgusted glance."
 
             wt "{i}I don't want to die today. Maybe I can somehow make it out.{/i}"
@@ -141,15 +167,24 @@ label other_burrow:
 
     wt "Gather what you can and follow me."
 
+    scene forestlight
+    show rabbit forest left
+    show softpaw forest mid
+    show onepaw forest right
+
     "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow and the fox might find you."
 
     "As you travel, you instruct the others to gather sticks and stones. Just in case the fox manages to track you down."
+
+    scene burrowoutside
 
     "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
     jump fortify
 
 label fox_attack:
+    scene burrowoutside
+    show fox entrance right
     "Sharp teeth and faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the burrow."
 
     "Then- before the fox can strike again, another sound cuts through the air."
@@ -157,21 +192,21 @@ label fox_attack:
     hide fox
     "The pale-eyed wolf"
     hide rabbit
-    show wolf at right
-    show fox at left
+    show wolf entrance right
+    show fox entrance left
     "She bursts forward, teeth flashing in the dim light, slamming into the fox before it can claim another life."
     "A vicious fight follows, snarls, snapping jaws, a tangle of fur and claws"
     hide fox
     "And then- Silence..."
     "The wolf stands there, breathing hard, blood on her muzzle."
     "Not hers."
-    "She turns to You, those sharp eyes locking onto yours."
+    "She turns to you, those sharp eyes locking onto yours."
     "The fox had been fast, cunning, hunting the young ones with sharp eyes and sharper teeth. But the wolf had been faster."
     "Now, the clearing is still, except for the ragged breath in your chest and the smell of blood in the air."
     "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
     "The wolf licks the blood from her muzzle, then turns to you."
-    show rabbit at left
-    show wolf at right
+    show rabbit entrance left
+    show wolf entrance right
     fe "Consider my debt paid, little rabbit."
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
@@ -202,7 +237,11 @@ label fox_attack:
            fe " (softly, almost to herself) Hmm... Rabbits..."
            "Then, with a final glance at the fox's body, she disappears into the woods."
 
-    hide wolf
-    hide rabbit
+    jump ending_hw_pc
+
+label ending_hw_pc:
+    scene burrowinside    
+
+    "Wowie everyone loves you"
 
     return

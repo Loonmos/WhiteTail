@@ -3,12 +3,22 @@
 label burrow4:
     scene burrowinside
 
-    show rabbit at left
-    show rabbit2 at right
+    show rabbit burrow left
+    show onepaw burrow right
 
     "Fourth burrow encounter."
 
-    hide rabbit
-    hide rabbit2
+    jump ending_pick
 
-    jump owl
+label ending_pick:
+    if help_wolf:
+        if pay_crows:
+            jump end_hw_pc
+        else:
+            jump end_hw_ic
+
+    else:
+        if pay_crows:
+            jump end_lw_pc
+        else:
+            jump end_lw_ic

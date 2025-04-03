@@ -2,8 +2,8 @@
 label burrow2:
     scene burrowinside
 
-    show rabbit at left
-    show rabbit2 at right
+    show rabbit burrow left
+    show onepaw burrow right
 
     op "(gruff, but approving) Back in one piece, I see. And not empty pawed, either."
     "You drop the seeds before him, ears twitching as he inspects them with a slow nod."
@@ -14,12 +14,12 @@ label burrow2:
     "(Onepaw flicks an ear dismissively.)"
 
     op "Go on, then. Get some rest. You'll need it."
-    hide rabbit2
+    hide onepaw
 
     "You nod but hesitate for a moment before turning away. You pad deeper into the burrow, weaving through the tunnels until you reach a smaller chamber."
     "Your younger sister, Softpaw, is curled up in a bundle of dry grass, ears twitching in half sleep. She blinks drowsily as Whitetail approaches."
 
-    show rabbit3 at right
+    show softpaw burrow left
     sp "(yawning) You're back!"
     wt "(softly, nudging her with your nose) Of course I am. Wouldn't leave you behind, would I?"
     sp "(Softpaw giggles, stretching her small limbs.)"
@@ -44,12 +44,5 @@ label burrow2:
 
     sp "Softpaw beams, taking another happy bite of the flower as she curls back up, content."
     "You watch her for a moment longer before settling down beside her, ears flicking as the burrow hums with quiet life."
-
-    
-    
-    
-    
-    hide rabbit
-    hide rabbit2
 
     jump wolf2

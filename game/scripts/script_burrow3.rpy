@@ -1,5 +1,4 @@
 
-
 label burrow3:
 
      if help_wolf:
@@ -10,8 +9,8 @@ label burrow3:
 label burrow3_help:
     scene burrowinside
 
-    show rabbit at left
-    show rabbit2 at right
+    show rabbit burrow left
+    show onepaw burrow right
 
     "The burrow is tense. Whitetail has just returned, her fur still bristling from the encounter."
     "Rabbits whisper among themselves as Elder Onepaw watches her from his usual place, his single front paw tapping against the dirt."
@@ -82,18 +81,13 @@ label burrow3_help:
 
         op "Then I hope, for all our sakes, that you're right."
 
-
-
-    hide rabbit
-    hide rabbit2
-
     jump fox
 
 label burrow3_leave:
-   scene burrow
+   scene burrowinside
 
-   show rabbit at left
-   show rabbit2 at right
+   show rabbit burrow left
+   show onepaw burrow right
 
    "The burrow is quiet. The other rabbits glance at you but do not whisper this time."
    "Onepaw is already watching you as you step inside, his ears turned toward you expectantly."
@@ -145,9 +139,5 @@ label burrow3_leave:
 
    "Onepaw doesn't question it. He gives another small nod and turns away, satisfied."
    "But as you move deeper into the burrow, you can't shake the weight in you chest. The wolf's voice lingers in your mind, and for the first time, you aren't sure if you made the right choice."
-
-
-   hide rabbit
-   hide rabbit2
 
    jump fox

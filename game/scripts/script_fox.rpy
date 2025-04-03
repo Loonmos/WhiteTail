@@ -1,9 +1,10 @@
-define vp = Character("Vulpes Fox", color="#616161")
-define wt = Character("White Tail", color="#A0A0A0")
+
+define food_fox = False
 
 label fox:
     scene burrowoutside with fade
     
+    show rabbit entrance
 
     "Surrounded by dying leaves, their colors mirroring the late fall sunset, you stumble upon a hole in the cold soil."
     "A faintly familiar scent lingers in the air-something you can't quite place."
@@ -24,12 +25,12 @@ label fox:
     
             
     scene burrowinside with fade
-    show rabbit at left
+    show rabbit burrow left
 
     "As you wander in, the smell of cold, overturned soil feels strange. A burrow should be warm, lived in... this one is wrong."
     "The scent of your kind is here, but so is something else. Something weightier. A muskier scent laced with the sharp tang of flesh."
     "Before you can think another thought-a warm, smooth exhale rolls from the darkness behind you."
-    show fox at right
+    show fox burrow right
     vp "(Sly and smoothly) You seem far away from your own neighborhood, little one."
 
     "White Tail jerks, frozen. A shape stirs in the shadows-deep, golden eyes watching."
@@ -172,6 +173,9 @@ label keep_it_vague:
     "The fox will remember this."
 
     "(You escape with food, but the fox knows your scent now. You may not be so lucky next time.)"
+
+    $ food_fox = True
+
     jump burrow4
 
 
@@ -194,7 +198,6 @@ label fox_fight:
 
     "You escape, but you're left shaken, scratched, and very, very aware of how close you came to being dinner."
     jump burrow4
-    return
 
 label fox_cower:
     "Your breath catches in your throat. Every nerve screams at you to move, but you can't. The fox sees it immediately."
@@ -213,9 +216,6 @@ label fox_cower:
 
     "You die. The fox is full. The night is quiet once more."
     jump death_scene3
-
-
-
 
 label tension_scene:
     # The build-up of tension between White Tail and Vulpes
@@ -244,35 +244,43 @@ label bravado2:
     jump death_scene2
 
 label death_scene1:
-    hide rabbit
-    hide fox
     scene heaven
     "You died..."
+    
     menu:
         "Go back to the last choice":
+            scene burrowinside with fade    
+            show rabbit burrow left
+            show fox burrow right    
+        
             jump fox_choice1
         "Go back to the beginning of the chapter":
             jump fox
 
 label death_scene2:
-    hide rabbit
-    hide fox
     scene heaven
     "You died..."
+    
     menu:
         "Go back to the last choice":
+            scene burrowinside with fade    
+            show rabbit burrow left
+            show fox burrow right
+
             jump fox_choice2
         "Go back to the beginning of the chapter":
             jump fox
 
-
 label death_scene3:
-    hide rabbit
-    hide fox
     scene heaven
     "You died..."
+    
     menu:
         "Go back to the last choice":
+            scene burrowinside with fade    
+            show rabbit burrow left
+            show fox burrow right
+
             jump fox_choice3
         "Go back to the beginning of the chapter":
             jump fox

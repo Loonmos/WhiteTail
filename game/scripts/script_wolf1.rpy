@@ -2,13 +2,11 @@
 label wolf1:
     scene forestdark
 
-    show rabbit:
-        yalign 0.4
-        xalign 0.2
+    show rabbit forest left
 
     "The cold bites at your nose as you sniff the air. It's quiet. Too quiet..."
 
-    wt "{i}I should head back soon. I have wandered a bit too far I think...{/i}"
+    wt "{i}I should head back soon, it's getting really late...{/i}"
 
     wt "{i}I didn't manage to find much, but it's not too bad for a first try right?{/i}"
 
@@ -22,7 +20,7 @@ label wolf1:
 
     un "Well hello little rabbit, aren't you a bit far from home?"
 
-    show wolf at right
+    show wolf forest right
 
     "A figure steps out of the undergrowth. She looks like a regular wolf, but those eyes... There is only one wolf with blue eyes around here."
 
@@ -118,12 +116,9 @@ label free:
 
     "You don't dare to go out and check."
 
-    "You stay in the log until the sun starts to set."
+    "You stay in the log until the moon is high in the sky."
 
     "You peak your head out, nothing to see, and bolt out. Not stopping until the burrow entrance comes into view."
-
-    hide rabbit
-    hide wolf
 
     jump burrow1
 
@@ -165,41 +160,42 @@ label freeze:
     jump death_wolf1
 
 label death_wolf1:
-    hide rabbit
-    hide wolf
     scene heaven
 
     menu:
-        de "You died..."
+        "You died..."
 
         "Go back to the last choice":
-            show rabbit at left
-            show wolf at right
-            scene snowy forest
+            scene forestdark with dissolve
+            show rabbit forest left with dissolve
+            show wolf forest right with dissolve
+   
             jump wolf1_choice1
 
         "Go back to the beginning of the chapter":
-            show rabbit at left
-            show wolf at right
-            scene snowy forest
+            scene snowy forestdark with dissolve  
+            show rabbit forest left with dissolve
+            show wolf forest right with dissolve
+            
+
             jump wolf1
 
 label death_wolf2:
-    hide rabbit
-    hide wolf
     scene heaven
 
     menu:
-        de "You died..."
+        "You died..."
 
         "Go back to the last choice":
-            show rabbit at left
-            show wolf at right
-            scene snowy forest
+            scene forestdark with dissolve 
+            show rabbit forest left with dissolve
+            show wolf forest right with dissolve
+
             jump wolf1_choice2
 
         "Go back to the beginning of the chapter":
-            show rabbit at left
-            show wolf at right
-            scene snowy forest
+            scene forestdark with dissolve
+            show rabbit forest left with dissolve
+            show wolf forest right with dissolve
+
             jump wolf1
