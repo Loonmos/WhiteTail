@@ -12,7 +12,7 @@ define c4 = Character("Talonskull", color="#616161")
 
 label start: # the game starts here
     play music "rickroll lofi.mp3" loop volume 0.7
-    scene forestlight
+    scene forestlightup
 
     menu:
         "Go to a different chapter"
@@ -96,7 +96,9 @@ label Giveup1:
      jump introend
 
 label introend:
-    scene forestdark with dissolve
+    scene forestdarkup with dissolve
+    show rabbit forest mid with dissolve
+
     "You take a breath and move forward again, each step heavier than the last. The forest seems to darken around you, not yet night, but no longer day."
     "Still, you couldn’t turn back. Not without proving you can do this, on your own."
 

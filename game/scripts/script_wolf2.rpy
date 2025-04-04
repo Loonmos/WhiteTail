@@ -2,13 +2,13 @@
 define help_wolf = False
 
 label wolf2:
-    scene forestlight
+    scene forestlightup with fade
 
     "You see a Wolf, their leg caught in a beartrap. They appear to be struggling against it, but all it's doing is making the gashes in their leg deeper."
 
     "Out of curiosity you come a bit closer."
 
-    show rabbit forest mid
+    show rabbit forest mid with dissolve
 
     wt "{i}It's her.{/i}"
 
@@ -22,8 +22,8 @@ label wolf2:
 
     "She lifts herself up again, chin high and ears pricked forward. But her eyes, wide and filled with pain, betray her."
 
-    show wolf2 forest right
-    show rabbit forest left
+    show rabbit forest left with dissolve
+    show wolf2 forest right with dissolve
 
     fe "And so we meet again, little rabbit."
 
@@ -93,9 +93,15 @@ label wolf_help:
 
     "Against every instinct you have, you move towards the wolf."
 
+    show rabbit forest helpwolf with dissolve
+
     wt "You better stick to your words wolf."
 
     "The wolf doesn't make a sound as you work on opening the trap. She sighs when she can finally remove her leg."
+
+    show rabbit forest left with dissolve
+    hide wolf2 with dissolve
+    show wolf forest right with dissolve
 
     "She tests her leg and it gives out under her weight."
 
@@ -105,6 +111,8 @@ label wolf_help:
 
     "The wolf stalks off, limping heavily and leaving a bloody trail."
 
+    hide wolf with dissolve
+
     wt "{i}I hope she keeps her promise... But for now, I'm safe and I have enough food to feed myself and the burrow.{/i}"
 
     jump burrow3
@@ -113,6 +121,9 @@ label wolf_leave:
     wt "{i}No, I shouldn't do this. You can never trust a predator. It's only a matter of time until she gets hungry again and I doubt a hungry wolf cares about promises.{/i}"
 
     wt "{i}I need to be smart and leave her here. Let's hope the hunter will come back soon...{/i}"
+
+    hide rabbit with dissolve
+    show rabbitflip forest left with dissolve
 
     "You take a step back and the Wolf's ears flatten."
 
@@ -135,6 +146,8 @@ label wolf_leave:
     wt "I will never trust a predator."
 
     fe "No! Wait!"
+
+    hide rabbitflip with dissolve
 
     "As you run off, you can hear the Wolf yell behind you."
 

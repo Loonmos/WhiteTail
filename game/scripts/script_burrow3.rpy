@@ -7,10 +7,10 @@ label burrow3:
          jump burrow3_leave
 
 label burrow3_help:
-    scene burrowinside
+    scene burrowinsideup with fade
 
-    show rabbit burrow left
-    show onepaw burrow right
+    show rabbit burrow left with dissolve
+    show onepaw burrow right with dissolve
 
     "The burrow is tense. Whitetail has just returned, her fur still bristling from the encounter."
     "Rabbits whisper among themselves as Elder Onepaw watches her from his usual place, his single front paw tapping against the dirt."
@@ -84,10 +84,10 @@ label burrow3_help:
     jump fox
 
 label burrow3_leave:
-   scene burrowinside
+   scene burrowinsideup with fade
 
-   show rabbit burrow left
-   show onepaw burrow right
+   show rabbit burrow left with dissolve
+   show onepaw burrow right with dissolve
 
    "The burrow is quiet. The other rabbits glance at you but do not whisper this time."
    "Onepaw is already watching you as you step inside, his ears turned toward you expectantly."
@@ -129,7 +129,7 @@ label burrow3_leave:
 
    "You nod again,but your paws feel heavy. You remember the way the wolf looked at you. Not pleading, not grateful, but calculating."
    "{i}I have left her there, trapped, to die, haven't I?{/i}"
-   "{i}If she gets out... If she meant what she said.../i}"
+   "{i}If she gets out... If she meant what she said...{/i}"
 
    "Onepaw is still looking at you, curiously."
 

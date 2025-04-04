@@ -1,10 +1,10 @@
 
 
 label burrow4:
-    scene burrowinside
+    scene burrowinsideup with fade
 
-    show rabbit burrow left
-    show onepaw burrow right
+    show rabbit burrow left with dissolve
+    show onepaw burrow right with dissolve
 
     "Fourth burrow encounter."
 

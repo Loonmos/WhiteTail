@@ -1,9 +1,9 @@
 
 label burrow1:
-    scene burrowinside
+    scene burrowinsideup with fade
 
-    show rabbit burrow left
-    show onepaw burrow right
+    show rabbit burrow left with dissolve
+    show onepaw burrow right with dissolve
 
     "The burrow is dimly lit, warmed by the presence of its inhabitants."
     "Whitetail stands near the entrance, your fur bristling with cold, paws empty."

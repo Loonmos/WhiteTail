@@ -1,12 +1,12 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_lw_pc:
-    scene forestlight
+    scene forestlightup with fade
     "The sun is starting to set, casting its long shadows across the forest floor."
 
     "You've been out here for a while now and your bundle is filled with food."
 
-    show rabbit forest mid
+    show rabbit forest mid with dissolve
 
     wt "{i}I'm finally getting the hang of this.{/i}"
     
@@ -18,7 +18,17 @@ label end_lw_pc:
 
     "They circle down and land in front of you."
 
+    show crow1 forest with dissolve
+    show crow2 forest with dissolve
+    show crow3 forest with dissolve
+    show crow4 forest with dissolve
+
     "(idk how the crow personalities work, but here they tell you whats up. maybe add a dialogue choice: say you wont give them more food or hear them out first.)"
+
+    hide crow1 forest with dissolve
+    hide crow2 forest with dissolve
+    hide crow3 forest with dissolve
+    hide crow4 forest with dissolve
 
     wt "{i}Oh no oh no oh no{/i}"
 
@@ -37,7 +47,7 @@ label end_lw_pc:
             wt "{i}No I cannot slow down.{/i}"
 
             wt "{i}I need to be there as fast as possible.{/i}"
-            scene burrowoutside
+            scene burrowoutsideup with fade
             "You arrive at the burrow, completely out of breath. The other rabbits look at you in alarm."
 
             jump arrive_at_burrow2
@@ -46,14 +56,16 @@ label end_lw_pc:
             wt "{i}I won't have any use if I collapse before I even get back.{/i}"
 
             wt "{i}Let's keep up a light jog.{/i}"
-            scene burrowoutside
+            scene burrowoutsideup with fade
             "You arrive at the burrow. The other rabbits look happy when they see your filled bundle."
 
             jump arrive_at_burrow2
 
 label arrive_at_burrow2:
-    scene burrowinside
-    show rabbit burrow left
+    scene burrowinsideup with fade
+    show onepaw burrow right
+    show softpaw burrow left
+    show rabbit burrow left with dissolve
 
     wt "The fox and the wolf! They're coming!"
 
@@ -76,26 +88,26 @@ label other_burrow2:
 
     wt "Gather what you can and follow me."
 
-    scene forestlight
-    show rabbit forest left
-    show softpaw forest mid
-    show onepaw forest right
+    scene forestlightup with fade
+    show rabbitflip forest left with dissolve
+    show softpaw forest mid with dissolve
+    show onepaw forest right with dissolve
 
     "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow means the predators finding you."
 
     "As you travel, you instruct the others to gather sticks and stones. Just in case they manage to track you down."
 
-    scene burrowoutside
+    scene burrowoutsideup with fade
 
     "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
     jump fortify2
 
 label fortify2:
-    scene burrowinside
-    show rabbit burrow left
-    show softpaw burrow left
-    show onepaw burrow right
+    scene burrowinsideup with fade
+    show rabbit burrow left with dissolve
+    show softpaw burrow left with dissolve
+    show onepawflip burrow right with dissolve
 
     "After a while, you have no more resources to build with and the barricade is finished."
 
@@ -114,17 +126,17 @@ label fortify2:
     jump ending_lw_pc
 
 label ending_lw_pc:
-    "People love you yayyy"
+    "And the rabbits lived happily every after or smt"
 
     jump fox_wolf
 
 label fox_wolf:
-    scene burrowoutside
+    scene burrowoutsideup with fade
     "A couple hours ago..."
 
     "The snow falls in gentle flakes, covering the burrow's entrance in a fresh white layer."
 
-    show fox entrance left
+    show fox entrance left with dissolve
 
     "Red fur emerges from the tree line."
 
@@ -134,7 +146,7 @@ label fox_wolf:
 
     "He steps forward, brushing the snow away with his paw. Nothing. The den is empty."
 
-    show wolf entrance right
+    show wolf entrance right with dissolve
 
     "A heavier set of mismatched steps follows. The Wolf emerges from the shadows, her blue eyes narrowing. But something is wrong, her stance is uneven."
 

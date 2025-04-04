@@ -1,14 +1,14 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_hw_ic:
-    scene burrowinside
+    scene burrowinsideup with fade
     show rabbit burrow left
 
     "The burrow is quiet. The usual rustling of leaves and distant chirping of birds fill the air. Whitetail is among her fellow rabbits, settling into the rhythm of daily life."
     "A sharp cry splits the air. You run outside and see the fox. The scent of blood follows."
 
-    scene burrowoutside
-    show fox entrance right
+    scene burrowoutsideup with fade
+    show fox entrance right with dissolve
 
     "Before any of the rabbits outside can flee, it strikes."
     "Sharp teeth, faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the warren."
@@ -32,14 +32,14 @@ label end_hw_ic:
 
     "Before the fox can strike again, another sound cuts through the air."
     "a low, deep growl. A shadow moves from the treeline."
-    hide fox
+    hide fox with dissolve
     "The wolf"
-    hide rabbit
-    show wolf entrance right
-    show fox entrance left
+    hide rabbit with dissolve
+    show wolf entrance right with dissolve
+    show fox entrance left with dissolve
     "She bursts forward, teeth flashing in the dim light, slamming into the fox before it can claim another life."
     "A vicious fight follows, snarls, snapping jaws, a tangle of fur and claws"
-    hide fox
+    hide fox with dissolve
     "Silence"
     "The wolf stands there, breathing hard, blood on her muzzle."
     "Not hers."
@@ -48,8 +48,8 @@ label end_hw_ic:
     "Now, the clearing is still, except for the ragged breath in your chest and the smell of blood in the air."
     "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
     "The wolf licks the blood from her muzzle, then turns to you."
-    show rabbit entrance left
-    show wolf entrance right
+    show rabbit entrance left with dissolve
+    show wolf entrance right with dissolve
     fe "Consider my debt paid, little rabbit."
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
@@ -83,7 +83,10 @@ label end_hw_ic:
     jump ending_hw_ic
 
 label ending_hw_ic:
-    scene burrowinside
-    "Wowie people like that you saved the wolf but not much more"
+    scene burrowinsideup with faded
+    show rabbit burrow left
+    show softpaw burrow left
+    show onepaw burrow right
+    "And the rabbits lived happily ever after or smt"
 
     return

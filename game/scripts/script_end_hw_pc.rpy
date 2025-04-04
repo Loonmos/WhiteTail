@@ -3,12 +3,12 @@
 define stepped_up = False
 
 label end_hw_pc:
-    scene forestlight
+    scene forestlightup with fade
     "The sun is starting to set, casting its long shadows across the forest floor."
 
     "You've been out here for a while now and your bundle is filled with food."
 
-    show rabbit forest mid
+    show rabbit forest mid with dissolve
 
     wt "{i}I'm finally getting the hang of this.{/i}"
     
@@ -20,7 +20,17 @@ label end_hw_pc:
 
     "They circle down and land in front of you."
 
+    show crow1 forest with dissolve
+    show crow2 forest with dissolve
+    show crow3 forest with dissolve
+    show crow4 forest with dissolve
+
     "(idk how the crow personalities work, but here they tell you whats up. maybe add a dialogue choice: say you wont give them more food or hear them out first.)"
+
+    hide crow1 forest with dissolve
+    hide crow2 forest with dissolve
+    hide crow3 forest with dissolve
+    hide crow4 forest with dissolve
 
     wt "{i}Oh no oh no oh no{/i}"
 
@@ -54,8 +64,10 @@ label end_hw_pc:
             jump arrive_at_burrow
 
 label arrive_at_burrow:
-    scene burrowinside
-    show rabbit burrow left
+    scene burrowinsideup with fade
+    show onepaw burrow right
+    show softpaw burrow left
+    show rabbit burrow left with dissolve
 
     wt "The fox! The fox is coming!"
 
@@ -85,7 +97,9 @@ label arrive_at_burrow:
 
                     "The others nod. They are determined, but the fear is evident in their eyes."
 
-                    hide rabbit
+                    hide rabbit with dissolve
+                    hide softpaw with dissolve
+                    hide onepaw with dissolve
 
                     "You and the others gather sticks, stones and anything else that can help reinforce the burrow's entrance."
 
@@ -99,15 +113,11 @@ label arrive_at_burrow:
 
             "You see elder Onepaw and he looks at you in disappointment."
 
-            show onepaw burrow right
-
             "(Onepaw gathers everyone's attention and tells them to fortify the burrow.)"
-
-            hide onepaw
 
             "The other rabbits agree, but you can feel the fear in the air."
 
-            scene burrowoutside
+            scene burrowoutsideup with fade
 
             "You and the others gather sticks, stones and anything else that can help reinforce the burrow's entrance."
 
@@ -116,10 +126,10 @@ label arrive_at_burrow:
 label fortify:
     "After a while, one of the other rabbits shouts in alarm: The fox has been spotted..."
 
-    scene burrowinside
+    scene burrowinsideup with fade
     show rabbit burrow left
     show softpaw burrow left
-    show onepaw burrow right
+    show onepawflip burrow right
 
     "Everyone runs inside and groups together. The air is tense, the barricade isn't perfect and everyone hopes it will hold up."
 
@@ -141,7 +151,7 @@ label fortify:
         "What do you do?"
 
         "Move to the front to fend off the fox":
-            # move whitetail
+            show rabbit burrow front with dissolve
             "You move towards the front and the other rabbits look at you with respect."
 
             wt "{i}I have to protect my burrow. Maybe I can hold off the fox long enough for them to escape.{/i}"
@@ -151,7 +161,7 @@ label fortify:
             jump fox_attack
 
         "Move to back to stay a bit safer":
-            # move whitetail
+            show rabbit burrow back with dissolve
             "You move towards the back and elder Onepaw shoots you a disgusted glance."
 
             wt "{i}I don't want to die today. Maybe I can somehow make it out.{/i}"
@@ -167,24 +177,24 @@ label other_burrow:
 
     wt "Gather what you can and follow me."
 
-    scene forestlight
-    show rabbit forest left
-    show softpaw forest mid
-    show onepaw forest right
+    scene forestlightup with fade
+    show rabbit forest left with dissolve
+    show softpaw forest mid with dissolve
+    show onepaw forest right with dissolve
 
     "Everyone moves out but you have to be careful. Going to fast might make obvious tracks, but going to slow and the fox might find you."
 
     "As you travel, you instruct the others to gather sticks and stones. Just in case the fox manages to track you down."
 
-    scene burrowoutside
+    scene burrowoutsideup with fade
 
     "By the time you get to the other burrow, you've gathered enough to make some fortifications."
 
     jump fortify
 
 label fox_attack:
-    scene burrowoutside
-    show fox entrance right
+    scene burrowoutsideup with fade
+    show fox entrance right with dissolve
     "Sharp teeth and faster than any rabbit can react. One is caught, another barely escapes. Panic erupts in the burrow."
 
     "Then- before the fox can strike again, another sound cuts through the air."
@@ -192,8 +202,8 @@ label fox_attack:
     hide fox
     "The pale-eyed wolf"
     hide rabbit
-    show wolf entrance right
-    show fox entrance left
+    show wolf entrance right with dissolve
+    show fox entrance left with dissolve
     "She bursts forward, teeth flashing in the dim light, slamming into the fox before it can claim another life."
     "A vicious fight follows, snarls, snapping jaws, a tangle of fur and claws"
     hide fox
@@ -205,8 +215,8 @@ label fox_attack:
     "Now, the clearing is still, except for the ragged breath in your chest and the smell of blood in the air."
     "The fox lies in a heap, throat torn, its clever eyes staring at nothing."
     "The wolf licks the blood from her muzzle, then turns to you."
-    show rabbit entrance left
-    show wolf entrance right
+    show rabbit entrance left with dissolve
+    show wolf entrance right with dissolve
     fe "Consider my debt paid, little rabbit."
 
     "She steps forward, lowering her head slightly so that only Whitetail can hear her next words"
@@ -240,8 +250,11 @@ label fox_attack:
     jump ending_hw_pc
 
 label ending_hw_pc:
-    scene burrowinside    
+    scene burrowinsideup with fade
+    show rabbit burrow left
+    show softpaw burrow left
+    show onepaw burrow right
 
-    "Wowie everyone loves you"
+    "And the rabbits lived happily ever after or smt"
 
     return

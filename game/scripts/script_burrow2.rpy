@@ -1,12 +1,12 @@
 
 label burrow2:
-    scene burrowinside
+    scene burrowinsideup with fade
 
-    show rabbit burrow left
-    show onepaw burrow right
+    show rabbit burrow left with dissolve
+    show onepaw burrow right with dissolve
 
     op "(gruff, but approving) Back in one piece, I see. And not empty pawed, either."
-    "You drop the seeds before him, ears twitching as he inspects them with a slow nod."
+    "You drop the food before him, ears twitching as he inspects them with a slow nod."
 
     op "These will do. Good work, Whitetail."
     wt "(Dipping your head) Thank you, Elder Onepaw."
@@ -14,12 +14,14 @@ label burrow2:
     "(Onepaw flicks an ear dismissively.)"
 
     op "Go on, then. Get some rest. You'll need it."
-    hide onepaw
+    hide onepaw with dissolve
+    hide rabbit with dissolve
+    show rabbitflip burrow left with dissolve
 
     "You nod but hesitate for a moment before turning away. You pad deeper into the burrow, weaving through the tunnels until you reach a smaller chamber."
     "Your younger sister, Softpaw, is curled up in a bundle of dry grass, ears twitching in half sleep. She blinks drowsily as Whitetail approaches."
 
-    show softpaw burrow left
+    show softpaw burrow left with dissolve
     sp "(yawning) You're back!"
     wt "(softly, nudging her with your nose) Of course I am. Wouldn't leave you behind, would I?"
     sp "(Softpaw giggles, stretching her small limbs.)"

@@ -1,9 +1,9 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_lw_ic:
-    scene burrowoutside
+    scene burrowoutsideup with fade
     "The morning is quiet, the air thick with the scent of damp earth and wildflowers."
-    show rabbit entrance
+    show rabbit entrance with dissolve
     "You stretch, feeling the warmth of the sun on your fur."
     "Another day in the warren. Another day of..."
     
@@ -20,8 +20,8 @@ label end_lw_ic:
     "And then..."
     "There is only you..."
     "The fox prowls to your side, panting, eyes gleaming with triumph. But it is the wolf who steps forward, her shadow stretching long over you."
-    show rabbit entrance left
-    show wolf entrance right
+    show rabbit entrance left with dissolve
+    show wolf entrance right with dissolve
     fe "(low, almost gentle) Did you think I would forget?"
 
     "She circles, slow and deliberate, the airthick with the weight of what is coming"
@@ -31,13 +31,13 @@ label end_lw_ic:
     "She stops, towering over you now."
 
     fe "So I made sure you wouldn't die alone either."
-    hide wolf
-    show fox entrance right
+    hide wolf with dissolve
+    show fox entrance right with dissolve
     "The fox chuckles, blood dripping from his muzzle."
     "He leans in close"
     vp "You should've given the crows your food. Maybe then someone would have warned you."
-    hide fox
-    show wolf entrance right
+    hide fox with dissolve
+    show wolf entrance right with dissolve
     "You see teeth. You feel the weight of inevitability."
     "The wolf doesn't lunge, she doesn't need to."
     "She takes her time, letting you understand."
@@ -47,8 +47,8 @@ label end_lw_ic:
     jump ending_death
 
 label ending_death:
-    scene heaven
-    show rabbit entrance
+    scene heaven with fade
+    show rabbit entrance with dissolve
 
     "The consequences of your actions caught up with you..."
 

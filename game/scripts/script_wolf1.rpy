@@ -1,8 +1,8 @@
 
 label wolf1:
-    scene forestdark
+    scene forestdarkup with fade
 
-    show rabbit forest left
+    show rabbitflip forest left with dissolve
 
     "The cold bites at your nose as you sniff the air. It's quiet. Too quiet..."
 
@@ -16,11 +16,14 @@ label wolf1:
 
     "You freeze. Someone is behind you..."
 
+    hide rabbitflip with dissolve
+    show rabbit forest left with dissolve
+
     "Slowly, you turn your head and you see a pair of pale eyes gleam from the shadows."
 
     un "Well hello little rabbit, aren't you a bit far from home?"
 
-    show wolf forest right
+    show wolf forest right with dissolve
 
     "A figure steps out of the undergrowth. She looks like a regular wolf, but those eyes... There is only one wolf with blue eyes around here."
 
@@ -74,6 +77,9 @@ label wolf1_choice1:
              jump run_away
 
 label run_away:
+    hide rabbit
+    show rabbitflip forest left with dissolve    
+
     "You bolt. Snow kicks up behind you as your paws hit the ground."
 
     "The forest blurs around you. You twist and weave through the undergrowth."
@@ -106,11 +112,19 @@ label free:
 
     "A fallen log with a gap just big enough for you. You throw yourself through it and..."
 
+    hide rabbitflip with dissolve
+    show rabbit forest left with dissolve
+
     "The wolf scratches and bites at the entrance, but she can't reach you."
 
     fe "You win this time little rabbit."
 
+    hide wolf with dissolve
+    #show wolfflip forest right with dissolve
+
     "You hear the wolf walk away."
+
+    #hide wolfflip with dissolve
 
     wt "{i}Is... is she gone?{/i}"
 
@@ -120,10 +134,14 @@ label free:
 
     "You peak your head out, nothing to see, and bolt out. Not stopping until the burrow entrance comes into view."
 
+    hide rabbit with easeoutright
+
     jump burrow1
 
 label pry:
-    "You try to pry it loose from the branch but..."    
+    "You try to pry it loose from the branch but..."  
+    
+    #show wolf forest attack with ease
 
     fe "Got you."
 
@@ -136,7 +154,9 @@ label pry:
     jump death_wolf2
 
 label no_choice:
-    "You weren't able to make a decision in time..."    
+    "You weren't able to make a decision in time..."  
+    
+    #show wolf forest attack with ease
 
     fe "Got you."
 
@@ -151,7 +171,9 @@ label no_choice:
 label freeze:
     "You stay rooted in place, unable to bring yourself to move."
 
-    "She moves, fast as the wind."
+    #show wolf forest attack with ease
+
+    "She moves as fast as the wind."
 
     "The world spins as you're thrown into the snow. Sharp claws press deep into your chest, creating a growing pool of blood beneath you."
 
@@ -160,42 +182,33 @@ label freeze:
     jump death_wolf1
 
 label death_wolf1:
-    scene heaven
+    scene heaven with fade
 
     menu:
         "You died..."
 
         "Go back to the last choice":
-            scene forestdark with dissolve
+            scene forestdarkup with fade
             show rabbit forest left with dissolve
             show wolf forest right with dissolve
    
             jump wolf1_choice1
 
         "Go back to the beginning of the chapter":
-            scene snowy forestdark with dissolve  
-            show rabbit forest left with dissolve
-            show wolf forest right with dissolve
-            
-
             jump wolf1
 
 label death_wolf2:
-    scene heaven
+    scene heaven with fade
 
     menu:
         "You died..."
 
         "Go back to the last choice":
-            scene forestdark with dissolve 
-            show rabbit forest left with dissolve
+            scene forestdarkup with fade 
+            show rabbitflip forest left with dissolve
             show wolf forest right with dissolve
 
             jump wolf1_choice2
 
         "Go back to the beginning of the chapter":
-            scene forestdark with dissolve
-            show rabbit forest left with dissolve
-            show wolf forest right with dissolve
-
             jump wolf1

@@ -2,9 +2,9 @@
 define food_fox = False
 
 label fox:
-    scene burrowoutside with fade
+    scene burrowoutsideup with fade
     
-    show rabbit entrance
+    show rabbit entrance with dissolve
 
     "Surrounded by dying leaves, their colors mirroring the late fall sunset, you stumble upon a hole in the cold soil."
     "A faintly familiar scent lingers in the air-something you can't quite place."
@@ -24,13 +24,13 @@ label fox:
             "You seem determined to go into the burrow no matter what. A brave rabbit isn't afraid!"
     
             
-    scene burrowinside with fade
-    show rabbit burrow left
+    scene burrowinsideup with fade
+    show rabbit burrow left with dissolve
 
     "As you wander in, the smell of cold, overturned soil feels strange. A burrow should be warm, lived in... this one is wrong."
     "The scent of your kind is here, but so is something else. Something weightier. A muskier scent laced with the sharp tang of flesh."
     "Before you can think another thought-a warm, smooth exhale rolls from the darkness behind you."
-    show fox burrow right
+    show fox burrow right with dissolve
     vp "(Sly and smoothly) You seem far away from your own neighborhood, little one."
 
     "White Tail jerks, frozen. A shape stirs in the shadows-deep, golden eyes watching."
@@ -244,42 +244,42 @@ label bravado2:
     jump death_scene2
 
 label death_scene1:
-    scene heaven
+    scene heaven with fade
     "You died..."
     
     menu:
         "Go back to the last choice":
-            scene burrowinside with fade    
-            show rabbit burrow left
-            show fox burrow right    
+            scene burrowinsideup with fade    
+            show rabbit burrow left with dissolve
+            show fox burrow right with dissolve
         
             jump fox_choice1
         "Go back to the beginning of the chapter":
             jump fox
 
 label death_scene2:
-    scene heaven
+    scene heaven with fade
     "You died..."
     
     menu:
         "Go back to the last choice":
-            scene burrowinside with fade    
-            show rabbit burrow left
-            show fox burrow right
+            scene burrowinsideup with fade    
+            show rabbit burrow left with dissolve
+            show fox burrow right with dissolve
 
             jump fox_choice2
         "Go back to the beginning of the chapter":
             jump fox
 
 label death_scene3:
-    scene heaven
+    scene heaven with fade
     "You died..."
     
     menu:
         "Go back to the last choice":
-            scene burrowinside with fade    
-            show rabbit burrow left
-            show fox burrow right
+            scene burrowinsideup with fade    
+            show rabbit burrow left with dissolve
+            show fox burrow right with dissolve
 
             jump fox_choice3
         "Go back to the beginning of the chapter":
