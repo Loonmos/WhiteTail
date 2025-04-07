@@ -25,7 +25,49 @@ label end_hw_pc:
     show crow3 forest with dissolve
     show crow4 forest with dissolve
 
-    "(idk how the crow personalities work, but here they tell you whats up. maybe add a dialogue choice: say you wont give them more food or hear them out first.)"
+    c2 "Well well.."
+    c3 "Hee hee!"
+    c4 "Found you."
+
+    wt "Again!?"
+
+    c1 "It's been a while, little flower."
+
+    
+    wt "W-what do you want from me now?"
+
+    
+    c1 "Haven't you realised?"
+    c2 "Slow!"
+    c3 "Stupid!"
+
+    "The three laugh and cackle, before being shut up by Shadewing"
+    c1 "Calm yourself."
+    c1 "Anyways, you might be curious as to why we're here?"
+
+    wt "I won't let you take anything from me, not this time!" 
+        
+
+    c1 "Hasn't this rabbit grown quite capable? Perhaps you could one day serve us."
+    c1 "No, we don't need anything from you anymore. At least for now..."
+
+    c2 "We fly"
+    c4 "We listen"
+    c3 "We see..."
+    c1 "Something, or someone is on the move."
+    c1 "The Murder may not murder, but we are the eyes of the forest. We know what's coming."
+    c2 "A flash of red!"
+    c3 "Narrow, yellow eyes"
+    c4 "Mad with hunger"
+    c1 "Coming for..."
+    
+    "{i} The Burrow..!{/i}"
+
+    wt "No... no..."
+    "Whitetail dashes, making a run for it the other direction. She doesn't even look back at the crows, who cackle and smirk."
+    c2 "Go, go!"
+    c3 "Run, run!"
+    c4 "Maybe you'll make it, maybe not..."
 
     hide crow1 forest with dissolve
     hide crow2 forest with dissolve
