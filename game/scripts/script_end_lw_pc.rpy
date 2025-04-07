@@ -168,25 +168,25 @@ label fox_wolf:
 
     fe "And you trust those scheming bastards?!"
 
-    "The fox' ears flatten, but he quickly regains his composure, flashing a sly grin."
+    "The fox' ears almost flatten, but he quickly regains his composure and flashes a sly grin."
 
     vp "Well someone lied, but it wasn't me. Maybe the rabbits caught wind of the plan."
 
-    "The Wolf tilts her head, watching him carefully. Her muscles coil, poised to strike at the slightest provocation."
+    "The Wolf tilts her head, watching him carefully. She changes her stance, ready to strike at the slightest provocation."
 
     fe "Or maybe you tricked me again..."
 
     vp "Oh, please. Don't be like that. You wound me."
 
-    "He places a paw on his chest as if deeply offended, but his eyes remain sharp."
+    "He places a paw on his chest as if deeply offended, but his eyes never leave hers."
 
-    "The Wolf is not amused."
+    "The Wolf does not seem amused."
 
     fe "Tell me, {i}Fox{/i}, how many times have I fallen for your silver tongue?"
 
     "Vulpes chuckles, taking a step back."
 
-    vp "Oh, don't be dramatic. What would I possibly gain from deceiving you?"
+    vp "Oh don't be dramatic. What would I possibly gain from deceiving you?"
 
     "The Wolf's lip curls into a sadistic grin."
 
@@ -194,27 +194,23 @@ label fox_wolf:
 
     "The Fox' eyes widen slightly. He moves to speak, but the Wolf is faster."
 
-    "She lunges and Vulpes barely dodges it."
+    "She lunges and he barely dodges it."
 
-    "He pivots, his tail fanning out as he tries to sidestep her next move. The Wolf shifts to follow, but the sudden movement causes her wound to re-open"
+    "He pivots as he tries to sidestep her next move. The Wolf shifts to follow, but the sudden movement causes her wound to re-open."
 
-    "A sharp jolt of pain ripples through her body"
+    "A sharp jolt of pain ripples through her body and she lets out a pained grunt."
 
-    "The Wolf falters and lets out a pained grunt."
+    "The Fox quickly leaps to take advantage of the opportunity. In a blur of red fur and flashing teeth, he aims for her neck."
 
-    "The Fox' sharp eyes flicker with realization."
+    "But a bit of pain is hardly something that can stop the Wolf."
 
-    "He moves faster now, taking advantage of the opportunity. In a blur of red fur and flashing teeth, he twists, aiming for her neck."
+    "Before the Fox can sink his teeth in, she uses her momentum to slam her body into his. They both fall to the ground in a flurry of snow."
 
-    "But pain is hardly something that stops the Wolf."
-
-    "Her snarl is vicious and before the Fox can sink his teeth in, she counters. Using her momentum, she swings her weight into him, driving her shoulder against his ribs. He stumbles, thrown off balance."
-
-    "She recovers first. Before the Fox can even scramble to his feet, her teeth are already at his throat."
+    "She recovers first. Before the Fox can even think to scramble to his feet, her teeth are already in his throat."
 
     "He lets out a gurgled breath. And then... silence."
 
-    "The Wolf steps back, the blood from her muzzle dripping onto the fresh snow. She exhales, the cold air turning her breath into mist."
+    "The Wolf steps back, the blood from her muzzle dripping onto the fresh snow."
 
     "Then, she picks up the Fox and limps off into the forest."
 

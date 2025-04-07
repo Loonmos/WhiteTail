@@ -2,6 +2,14 @@
 define help_wolf = False
 
 label wolf2:
+    scene burrowoutsideup with fade
+
+    show rabbit entrance
+    
+    "The rising sun rouses the burrow from its slumber."
+    "Yesterdays events were strange, but you finally managed to bring some food home."
+    "Your little sister waves you goodbye as you step out into the snow."
+
     scene forestlightup with fade
 
     "You see a Wolf, their leg caught in a beartrap. They appear to be struggling against it, but all it's doing is making the gashes in their leg deeper."
