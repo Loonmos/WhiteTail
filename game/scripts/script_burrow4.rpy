@@ -1,12 +1,12 @@
 
 
 label burrow4:
-    scene burrowinsideup with fade
+    #scene burrowinsideup with fade
 
-    show rabbit burrow left with dissolve
-    show onepaw burrow right with dissolve
+    #show rabbit burrow left with dissolve
+    #show onepaw burrow right with dissolve
 
-    "Fourth burrow encounter."
+    #"Fourth burrow encounter."
 
     jump ending_pick
 

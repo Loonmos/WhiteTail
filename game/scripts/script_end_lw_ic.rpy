@@ -1,13 +1,17 @@
 # this is the ending in which you help the wolf and pay the crows
 
 label end_lw_ic:
-    scene burrowoutsideup with fade
-    "The morning is quiet, the air thick with the scent of damp earth and wildflowers."
-    show rabbit entrance with dissolve
-    "You stretch, feeling the warmth of the sun on your fur."
-    "Another day in the warren. Another day of..."
+    scene burrowinsideup with fade
+    "You are the last one to come back and the burrow breathes a sigh of relief."
+    show rabbit burrow left with dissolve
+    "You make your way towards your sister, excited to tell her of your adventures."
+    "You wonder how she'll react. Happy, worried or..."
     
     "CRACK!"
+
+    scene burrowoutsideup with fade
+    show fox entrance left with dissolve
+    show wolf3 entrance right with dissolve
 
     "A scream. A shape lunging from the tall grass. The scent of blood."
 
@@ -20,8 +24,9 @@ label end_lw_ic:
     "And then..."
     "There is only you..."
     "The fox prowls to your side, panting, eyes gleaming with triumph. But it is the wolf who steps forward, her shadow stretching long over you."
+
+    hide fox with dissolve
     show rabbit entrance left with dissolve
-    show wolf3 entrance right with dissolve
     fe "(low, almost gentle) Did you think I would forget?"
 
     "She circles, slow and deliberate, the airthick with the weight of what is coming"

@@ -2,9 +2,11 @@
 
 label end_hw_ic:
     scene burrowinsideup with fade
-    show rabbit burrow left
-
-    "The burrow is quiet. The usual rustling of leaves and distant chirping of birds fill the air. Whitetail is among her fellow rabbits, settling into the rhythm of daily life."
+    "You are the last one to come back and the burrow breathes a sigh of relief."
+    show rabbit burrow left with dissolve
+    "You make your way towards your sister, excited to tell her of your adventures."
+    "You wonder how she'll react. Happy, worried or..."
+    
     "A sharp cry splits the air. You run outside and see the fox. The scent of blood follows."
 
     scene burrowoutsideup with fade
