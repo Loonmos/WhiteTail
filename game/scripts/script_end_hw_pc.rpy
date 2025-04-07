@@ -113,7 +113,9 @@ label arrive_at_burrow:
 
             "You see elder Onepaw and he looks at you in disappointment."
 
-            "(Onepaw gathers everyone's attention and tells them to fortify the burrow.)"
+            "He stands tall and with a loud voice he shouts:"
+            "Alright everyone, if you all listen to me we'll all survive this."
+            "Gather everything lying around and barricade the burrow!"
 
             "The other rabbits agree, but you can feel the fear in the air."
 
