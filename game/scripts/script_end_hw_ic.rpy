@@ -83,10 +83,10 @@ label end_hw_ic:
     jump ending_hw_ic
 
 label ending_hw_ic:
-    scene burrowinsideup with faded
-    show rabbit burrow left
-    show softpaw burrow left
-    show onepaw burrow right
-    "And the rabbits lived happily ever after or smt"
+    #scene burrowinsideup with faded
+    #show rabbit burrow left
+    #show softpaw burrow left
+    #show onepaw burrow right
+    #"And the rabbits lived happily ever after or smt"
 
     return

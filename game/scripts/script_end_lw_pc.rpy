@@ -126,7 +126,7 @@ label fortify2:
     jump ending_lw_pc
 
 label ending_lw_pc:
-    "And the rabbits lived happily every after or smt"
+    #"And the rabbits lived happily every after or smt"
 
     jump fox_wolf
 

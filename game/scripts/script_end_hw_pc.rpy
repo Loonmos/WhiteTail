@@ -294,11 +294,11 @@ label fox_attack:
     jump ending_hw_pc
 
 label ending_hw_pc:
-    scene burrowinsideup with fade
-    show rabbit burrow left
-    show softpaw burrow left
-    show onepaw burrow right
+    #scene burrowinsideup with fade
+    #show rabbit burrow left
+    #show softpaw burrow left
+    #show onepaw burrow right
 
-    "And the rabbits lived happily ever after or smt"
+    #"And the rabbits lived happily ever after or smt"
 
     return
