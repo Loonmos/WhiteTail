@@ -146,7 +146,7 @@ label fox_wolf:
 
     "He steps forward, brushing the snow away with his paw. Nothing. The den is empty."
 
-    show wolf entrance right with dissolve
+    show wolf3 entrance right with dissolve
 
     "A heavier set of mismatched steps follows. The Wolf emerges from the shadows, her blue eyes narrowing. But something is wrong, her stance is uneven."
 

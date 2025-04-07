@@ -21,7 +21,7 @@ label end_lw_ic:
     "There is only you..."
     "The fox prowls to your side, panting, eyes gleaming with triumph. But it is the wolf who steps forward, her shadow stretching long over you."
     show rabbit entrance left with dissolve
-    show wolf entrance right with dissolve
+    show wolf3 entrance right with dissolve
     fe "(low, almost gentle) Did you think I would forget?"
 
     "She circles, slow and deliberate, the airthick with the weight of what is coming"
@@ -31,13 +31,13 @@ label end_lw_ic:
     "She stops, towering over you now."
 
     fe "So I made sure you wouldn't die alone either."
-    hide wolf with dissolve
+    hide wolf3 with dissolve
     show fox entrance right with dissolve
     "The fox chuckles, blood dripping from his muzzle."
     "He leans in close"
     vp "You should've given the crows your food. Maybe then someone would have warned you."
     hide fox with dissolve
-    show wolf entrance right with dissolve
+    show wolf3 entrance right with dissolve
     "You see teeth. You feel the weight of inevitability."
     "The wolf doesn't lunge, she doesn't need to."
     "She takes her time, letting you understand."
@@ -48,7 +48,6 @@ label end_lw_ic:
 
 label ending_death:
     scene heaven with fade
-    show rabbit entrance with dissolve
 
     "The consequences of your actions caught up with you..."
 

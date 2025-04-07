@@ -22,15 +22,14 @@ label fox:
 
         "Enter the burrow":
             "You seem determined to go into the burrow no matter what. A brave rabbit isn't afraid!"
-    
             
-    scene burrowinsideup with fade
-    show rabbit burrow left with dissolve
+    scene foxburrowup with fade
+    show rabbit foxburrow with dissolve
 
     "As you wander in, the smell of cold, overturned soil feels strange. A burrow should be warm, lived in... this one is wrong."
     "The scent of your kind is here, but so is something else. Something weightier. A muskier scent laced with the sharp tang of flesh."
     "Before you can think another thought-a warm, smooth exhale rolls from the darkness behind you."
-    show fox burrow right with dissolve
+    show fox foxburrow with dissolve
     vp "(Sly and smoothly) You seem far away from your own neighborhood, little one."
 
     "White Tail jerks, frozen. A shape stirs in the shadows-deep, golden eyes watching."
@@ -249,9 +248,9 @@ label death_scene1:
     
     menu:
         "Go back to the last choice":
-            scene burrowinsideup with fade    
-            show rabbit burrow left with dissolve
-            show fox burrow right with dissolve
+            scene foxburrowup with fade    
+            show rabbit foxburrow with dissolve
+            show fox foxburrow with dissolve
         
             jump fox_choice1
         "Go back to the beginning of the chapter":
@@ -263,9 +262,9 @@ label death_scene2:
     
     menu:
         "Go back to the last choice":
-            scene burrowinsideup with fade    
-            show rabbit burrow left with dissolve
-            show fox burrow right with dissolve
+            scene foxburrowup with fade    
+            show rabbit foxburrow with dissolve
+            show fox foxburrow with dissolve
 
             jump fox_choice2
         "Go back to the beginning of the chapter":
@@ -277,9 +276,9 @@ label death_scene3:
     
     menu:
         "Go back to the last choice":
-            scene burrowinsideup with fade    
-            show rabbit burrow left with dissolve
-            show fox burrow right with dissolve
+            scene foxburrowup with fade    
+            show rabbit foxburrow with dissolve
+            show fox foxburrow with dissolve
 
             jump fox_choice3
         "Go back to the beginning of the chapter":

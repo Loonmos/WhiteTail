@@ -81,6 +81,12 @@ transform rabbit_burrow_pos_back:
 
 image rabbit burrow back = At("rabbit.png", rabbit_burrow_pos_back)
 
+transform rabbit_foxburrow_pos:
+    yalign 0.55
+    xalign 0.8
+
+image rabbit foxburrow = At("rabbitflip.png", rabbit_foxburrow_pos)
+
 
 
 
@@ -155,6 +161,12 @@ transform wolf2_forest_pos_right:
     xalign 0.99
 
 image wolf2 forest right = At("wolf2.PNG", wolf2_forest_pos_right)
+
+transform wolf3_entrance_pos_right:
+    yalign 0.15
+    xalign 0.99
+
+image wolf3 entrance right = At("wolf3.png", wolf3_entrance_pos_right)
 
 
 
@@ -235,3 +247,9 @@ transform fox_burrow_pos_right:
     xalign 0.8
 
 image fox burrow right = At("fox.PNG", fox_burrow_pos_right)
+
+transform fox_foxburrow_pos:
+    yalign 0.01
+    xalign 0.1
+
+image fox foxburrow = At("foxflip.PNG", fox_foxburrow_pos)
